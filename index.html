@@ -1,81 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raddar Agronegócios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raddar Agronegócios</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* HEADER */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: #000;
-    border-bottom: 2px solid #c59d2a;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
 
-header img {
-    height: 60px;
-}
+    /* CABEÇALHO */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #ffffff;
+      border-bottom: 2px solid #d4af37;
+    }
 
-nav a {
-    color: #fff;
-    margin-left: 20px;
-    text-decoration: none;
-}
+    header img {
+      height: 45px;
+    }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-}
+    nav a {
+      color: #1a1a1a;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 18px;
+      font-weight: 500;
+    }
 
-.hero h1 {
-    font-size: 36px;
-}
+    nav a:hover {
+      color: #b8860b;
+    }
 
-.hero p {
-    max-width: 600px;
-    margin: 20px auto;
-}
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 120px 20px 140px;
+      background: #ffffff;
+    }
 
-.botao {
-    background: #c62828;
-    padding: 15px 30px;
-    border-radius: 5px;
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    margin-top: 20px;
-}
-</style>
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 25px;
+      color: #111111;
+      font-weight: bold;
+    }
+
+    .hero p {
+      font-size: 28px;
+      max-width: 950px;
+      margin: 0 auto 40px;
+      color: #444444;
+      line-height: 1.5;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c62828;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 16px 34px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #a91f1f;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 80px 20px 100px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 14px 28px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <header>
     <img src="logo.png" alt="Raddar Agronegócios">
     <nav>
-        <a href="#">Início</a>
-        <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
     </nav>
-</header>
+  </header>
 
-<section class="hero">
+  <section class="hero" id="inicio">
     <h1>Perícia Rural e Consultoria Agrícola</h1>
-    <p>Atuação técnica em perícia rural, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.</p>
-    <a class="botao" href="#">Falar no WhatsApp</a>
-</section>
+    <p>
+      Atuação técnica em perícia rural, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.
+    </p>
+    <a href="https://wa.me/5562999305405" target="_blank" class="btn">Falar no WhatsApp</a>
+  </section>
 
 </body>
 </html>
