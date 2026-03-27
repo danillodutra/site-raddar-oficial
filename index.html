@@ -9,50 +9,60 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d0d0d;
-    color: #fff;
+    background: #0b0b0b;
+    color: #ffffff;
 }
 
 header {
-    text-align: center;
-    padding: 30px;
     background: #000;
-    border-bottom: 2px solid #c9a227;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #c59d2f;
 }
 
-header h1 {
-    margin: 0;
+.logo {
+    max-width: 260px;
 }
 
 .hero {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
-.hero h2 {
-    font-size: 32px;
+.hero h1 {
+    font-size: 38px;
+    margin-bottom: 15px;
 }
 
 .hero p {
+    color: #ccc;
     max-width: 700px;
     margin: auto;
-    line-height: 1.5;
 }
 
-.botao {
+.btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 15px 25px;
-    background: #c9a227;
-    color: #000;
-    font-weight: bold;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #c1272d; /* vermelho da marca */
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #a81f24;
 }
 
 .section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.section h2 {
+    color: #c59d2f;
+    margin-bottom: 30px;
 }
 
 .cards {
@@ -63,26 +73,23 @@ header h1 {
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 20px;
-    width: 250px;
-    border-radius: 8px;
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    width: 260px;
+    border: 1px solid #1e1e1e;
 }
 
 .card h3 {
-    color: #c9a227;
-}
-
-.sobre {
-    max-width: 800px;
-    margin: auto;
+    color: #0f5d2f; /* verde da marca */
 }
 
 footer {
+    background: #000;
     text-align: center;
     padding: 20px;
-    background: #000;
-    border-top: 1px solid #333;
+    font-size: 14px;
+    color: #888;
 }
 </style>
 
@@ -91,18 +98,15 @@ footer {
 <body>
 
 <header>
-    <h1>Raddar Agronegócios</h1>
+    <img src="logo.png" class="logo">
 </header>
 
 <section class="hero">
-    <h2>Perícia Rural e Consultoria Agrícola</h2>
-
+    <h1>Perícia Rural e Consultoria Agrícola</h1>
     <p>
-        Especialista em perícia rural, crédito rural e análise técnica para processos judiciais.
-        Atuação em todo o Brasil com laudos técnicos robustos e foco na defesa do produtor rural.
+        Atuação técnica em perícia rural, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.
     </p>
-
-    <a class="botao" href="https://wa.me/5562999305405?text=Olá,%20vim%20pelo%20site%20e%20quero%20informações%20sobre%20perícia%20rural">
+    <a class="btn" href="https://wa.me/5562999305405" target="_blank">
         Falar no WhatsApp
     </a>
 </section>
@@ -111,42 +115,38 @@ footer {
     <h2>Áreas de Atuação</h2>
 
     <div class="cards">
-
         <div class="card">
             <h3>Perícia Rural</h3>
-            <p>Atuação em processos judiciais com elaboração de laudos técnicos e pareceres.</p>
+            <p>Atuação em processos judiciais e extrajudiciais.</p>
         </div>
 
         <div class="card">
             <h3>Crédito Rural</h3>
-            <p>Prorrogação, revisão de dívidas e análise técnica conforme MCR 2.6.4.</p>
+            <p>Renegociação, prorrogação e análise técnica.</p>
         </div>
 
         <div class="card">
             <h3>Geoprocessamento</h3>
-            <p>Mapeamento por satélite, NDVI e análise de produtividade agrícola.</p>
+            <p>NDVI, satélite e análise de produtividade.</p>
         </div>
 
         <div class="card">
             <h3>Regularização Ambiental</h3>
-            <p>CAR, APP, notificações ambientais e recomposição de áreas.</p>
+            <p>CAR, APP e notificações ambientais.</p>
         </div>
-
     </div>
 </section>
 
-<section class="section sobre">
-    <h2>Sobre o Perito</h2>
-
+<section class="section">
+    <h2>Sobre</h2>
     <p>
-        Engenheiro Agrônomo e Perito Judicial com atuação em processos envolvendo crédito rural,
-        perícia agronômica e conflitos fundiários. Experiência técnica em diversos estados do Brasil,
-        com foco em segurança jurídica e embasamento técnico sólido.
+        Engenheiro Agrônomo e Perito Judicial com atuação em crédito rural, perícia agronômica e conflitos fundiários.
+        Experiência em diversos estados do Brasil, com foco em segurança jurídica e embasamento técnico sólido.
     </p>
 </section>
 
 <footer>
-    <p>Raddar Agronegócios © 2026</p>
+    © Raddar Agronegócios
 </footer>
 
 </body>
