@@ -57,27 +57,27 @@
       justify-content: center;
       text-align: center;
       padding: 100px 20px;
+      background: #f3f3f3;
+    }
 
-      background-image:
-        linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
-        url('https://raw.githubusercontent.com/danillodutra/site-raddar-oficial/main/fundo.jpg');
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    .hero-content {
+      max-width: 1100px;
     }
 
     .hero h1 {
       font-size: 60px;
       margin-bottom: 25px;
       color: #111111;
+      font-weight: 700;
+      line-height: 1.15;
     }
 
     .hero p {
       font-size: 26px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
       color: #3f3f3f;
+      line-height: 1.5;
     }
 
     .services {
@@ -92,30 +92,53 @@
 
     .section-title h2 {
       font-size: 42px;
-      margin-bottom: 10px;
+      color: #111111;
+      margin-bottom: 15px;
     }
 
     .section-title p {
       font-size: 20px;
-      color: #555;
+      color: #555555;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
     .services-grid {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 25px;
     }
 
     .service-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 35px 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
       border-top: 4px solid #d4af37;
+      transition: 0.3s;
     }
 
-    /* CONTATO */
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      color: #111111;
+      margin-bottom: 15px;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      font-size: 17px;
+      color: #555555;
+      line-height: 1.7;
+    }
+
     .contact {
       padding: 100px 40px;
       background: #ffffff;
@@ -123,39 +146,79 @@
 
     .contact-container {
       max-width: 1200px;
-      margin: auto;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 45px;
       align-items: center;
     }
 
     .contact-info h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
+      font-size: 42px;
+      color: #111111;
+      margin-bottom: 30px;
     }
 
     .contact-info p {
       font-size: 18px;
-      color: #555;
-      margin-bottom: 10px;
-      line-height: 1.6;
+      color: #555555;
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    .contact-info strong {
+      color: #1a1a1a;
+    }
+
+    .contact-link {
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.3s;
+    }
+
+    .contact-link:hover {
+      color: #b8860b;
+      border-bottom: 1px solid #b8860b;
     }
 
     .map iframe {
       width: 100%;
-      height: 350px;
+      height: 380px;
       border: 0;
-      border-radius: 12px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .contact-container {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+
+      .hero {
+        min-height: 70vh;
+        padding: 80px 20px;
       }
 
       .hero h1 {
@@ -165,11 +228,52 @@
       .hero p {
         font-size: 20px;
       }
+
+      .services {
+        padding: 70px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .section-title p {
+        font-size: 18px;
+      }
+
+      .contact {
+        padding: 70px 20px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info h2 {
+        font-size: 32px;
+      }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .services-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .service-card h3 {
+        font-size: 22px;
+      }
+
+      .service-card p,
+      .contact-info p {
+        font-size: 16px;
       }
     }
   </style>
@@ -177,7 +281,7 @@
 <body>
 
   <header>
-    <img src="logo.png">
+    <img src="logo.png" alt="Raddar Agronegócios">
     <nav>
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
@@ -186,7 +290,7 @@
   </header>
 
   <section class="hero" id="inicio">
-    <div>
+    <div class="hero-content">
       <h1>Perícia & Consultoria Agrícola</h1>
       <p>
         Atuação especializada com rigor técnico, segurança jurídica e excelência em soluções para o agronegócio.
@@ -197,31 +301,84 @@
   <section class="services" id="servicos">
     <div class="section-title">
       <h2>Áreas de Atuação</h2>
-      <p>Soluções técnicas desenvolvidas com responsabilidade.</p>
+      <p>
+        Soluções técnicas desenvolvidas com metodologia, responsabilidade e foco na realidade do campo.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Perícia Rural</h3>
+        <p>
+          Atuação técnica em demandas judiciais e extrajudiciais, com análises fundamentadas e abordagem pericial precisa.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Crédito Rural</h3>
+        <p>
+          Suporte técnico em operações de crédito, renegociação, avaliação de capacidade produtiva e análise documental.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Geoprocessamento</h3>
+        <p>
+          Mapeamento, análise espacial, interpretação de imagens e produção de materiais técnicos aplicados ao agronegócio.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Regularização Ambiental</h3>
+        <p>
+          Apoio técnico em questões ambientais, uso do solo, áreas protegidas e adequação de propriedades rurais.
+        </p>
+      </div>
     </div>
   </section>
 
   <section class="contact" id="contato">
     <div class="contact-container">
-
       <div class="contact-info">
         <h2>Contato & Localização</h2>
 
         <p><strong>Raddar Agronegócios</strong></p>
-        <p>Edifício Aquarius Center</p>
-        <p>Sala 1106</p>
 
-        <p><strong>WhatsApp:</strong> (62) 99930-5405</p>
+        <p>
+          <strong>Endereço:</strong>
+          <a
+            class="contact-link"
+            href="https://www.google.com/maps/place/Edif%C3%ADcio+Aquarius+Center/data=!4m2!3m1!1s0x0:0xad1762ca5f2a5764?sa=X&ved=1t:2428&ictx=111"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Edifício Aquarius Center Empresarial, Sala 1106, R. T-36, St. Bueno, Goiânia - GO, 74230-105
+          </a>
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong>
+          <a
+            class="contact-link"
+            href="https://wa.me/5562999305405"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            (62) 99930-5405
+          </a>
+        </p>
+
         <p><strong>Atendimento:</strong> Goiânia - GO</p>
-        <p><strong>Atuação:</strong> Todo o Brasil</p>
       </div>
 
       <div class="map">
         <iframe
-          src="https://www.google.com/maps?q=Edifício+Aquarius+Center&output=embed">
+          src="https://www.google.com/maps?q=Edif%C3%ADcio+Aquarius+Center+Empresarial,+R.+T-36,+St.+Bueno,+Goi%C3%A2nia+-+GO,+74230-105&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
         </iframe>
       </div>
-
     </div>
   </section>
 
