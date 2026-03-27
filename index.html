@@ -50,18 +50,21 @@
       color: #b8860b;
     }
 
+    /* HERO COM IMAGEM FUNCIONANDO */
     .hero {
-      min-height: 78vh;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 100px 20px;
+
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.68)),
-        url('./fundo.jpg');
+        linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)),
+        url('https://raw.githubusercontent.com/danillodutra/site-raddar-oficial/main/fundo.jpg');
+
       background-size: cover;
-      background-position: center center;
+      background-position: center;
       background-repeat: no-repeat;
     }
 
@@ -70,19 +73,18 @@
     }
 
     .hero h1 {
-      font-size: 62px;
-      line-height: 1.15;
-      margin-bottom: 28px;
+      font-size: 60px;
+      margin-bottom: 25px;
       color: #111111;
       font-weight: 700;
     }
 
     .hero p {
-      font-size: 27px;
-      line-height: 1.5;
-      color: #3f3f3f;
-      max-width: 950px;
+      font-size: 26px;
+      max-width: 900px;
       margin: 0 auto;
+      color: #3f3f3f;
+      line-height: 1.5;
     }
 
     .services {
@@ -106,7 +108,6 @@
       color: #555555;
       max-width: 800px;
       margin: 0 auto;
-      line-height: 1.6;
     }
 
     .services-grid {
@@ -135,7 +136,6 @@
       font-size: 24px;
       color: #111111;
       margin-bottom: 15px;
-      line-height: 1.3;
     }
 
     .service-card p {
@@ -150,49 +150,11 @@
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 44px;
       }
 
       .hero p {
-        font-size: 23px;
-      }
-    }
-
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 16px;
-      }
-
-      .hero {
-        min-height: 70vh;
-        padding: 80px 20px;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 20px;
-      }
-
-      .services {
-        padding: 70px 20px;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
-      }
-
-      .section-title p {
-        font-size: 18px;
+        font-size: 22px;
       }
     }
 
@@ -202,19 +164,11 @@
       }
 
       .hero h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .hero p {
         font-size: 18px;
-      }
-
-      .service-card h3 {
-        font-size: 22px;
-      }
-
-      .service-card p {
-        font-size: 16px;
       }
     }
   </style>
@@ -250,30 +204,22 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Perícia Rural</h3>
-        <p>
-          Atuação técnica em demandas judiciais e extrajudiciais, com análises fundamentadas e abordagem pericial precisa.
-        </p>
+        <p>Atuação técnica em demandas judiciais e extrajudiciais.</p>
       </div>
 
       <div class="service-card">
         <h3>Crédito Rural</h3>
-        <p>
-          Suporte técnico em operações de crédito, renegociação, avaliação de capacidade produtiva e análise documental.
-        </p>
+        <p>Análise técnica e suporte em operações financeiras.</p>
       </div>
 
       <div class="service-card">
         <h3>Geoprocessamento</h3>
-        <p>
-          Mapeamento, análise espacial, interpretação de imagens e produção de materiais técnicos aplicados ao agronegócio.
-        </p>
+        <p>Mapeamento e análise por imagens de satélite.</p>
       </div>
 
       <div class="service-card">
         <h3>Regularização Ambiental</h3>
-        <p>
-          Apoio técnico em questões ambientais, uso do solo, áreas protegidas e adequação de propriedades rurais.
-        </p>
+        <p>Adequação ambiental de propriedades rurais.</p>
       </div>
     </div>
   </section>
