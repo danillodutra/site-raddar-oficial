@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Perícia Rural</title>
+
+<style>
+body {font-family: Arial; margin:0;}
+header {display:flex; justify-content:space-between; padding:20px 40px; border-bottom:2px solid #d4af37;}
+nav a {margin-left:30px; text-decoration:none; color:#000;}
+
+.container {padding:80px 40px; max-width:1100px; margin:auto;}
+
+.grid {
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:25px;
+}
+
+.card {
+padding:30px;
+border:1px solid #eee;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.card:hover {
+border-color:#d4af37;
+transform:translateY(-3px);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" height="45">
+<nav>
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="contato.html">Contato</a>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>Perícia Rural</h1>
+
+<div class="grid">
+
+<div class="card" onclick="location.href='servidao.html'">
+<h3>Servidão Administrativa</h3>
+</div>
+
+<div class="card" onclick="location.href='avaliacao.html'">
+<h3>Avaliação de Imóveis Rurais</h3>
+</div>
+
+<div class="card" onclick="location.href='frustracao-safra.html'">
+<h3>Frustração de Safra (Lavouras)</h3>
+</div>
+
+<div class="card" onclick="location.href='pecuaria.html'">
+<h3>Redução da Capacidade Produtiva Pecuária</h3>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
