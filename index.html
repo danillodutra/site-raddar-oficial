@@ -50,7 +50,6 @@
       color: #b8860b;
     }
 
-    /* HERO COM IMAGEM FUNCIONANDO */
     .hero {
       min-height: 80vh;
       display: flex;
@@ -68,23 +67,17 @@
       background-repeat: no-repeat;
     }
 
-    .hero-content {
-      max-width: 1100px;
-    }
-
     .hero h1 {
       font-size: 60px;
       margin-bottom: 25px;
       color: #111111;
-      font-weight: 700;
     }
 
     .hero p {
       font-size: 26px;
       max-width: 900px;
-      margin: 0 auto;
+      margin: auto;
       color: #3f3f3f;
-      line-height: 1.5;
     }
 
     .services {
@@ -99,76 +92,84 @@
 
     .section-title h2 {
       font-size: 42px;
-      color: #111111;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .section-title p {
       font-size: 20px;
-      color: #555555;
-      max-width: 800px;
-      margin: 0 auto;
+      color: #555;
     }
 
     .services-grid {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 25px;
     }
 
     .service-card {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 35px 25px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
       border-top: 4px solid #d4af37;
-      transition: 0.3s;
     }
 
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+    /* CONTATO */
+    .contact {
+      padding: 100px 40px;
+      background: #ffffff;
     }
 
-    .service-card h3 {
-      font-size: 24px;
-      color: #111111;
-      margin-bottom: 15px;
+    .contact-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
     }
 
-    .service-card p {
-      font-size: 17px;
-      color: #555555;
-      line-height: 1.7;
+    .contact-info h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
     }
 
-    @media (max-width: 1100px) {
+    .contact-info p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 900px) {
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .hero h1 {
-        font-size: 44px;
-      }
-
-      .hero p {
-        font-size: 22px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .services-grid {
+      .contact-container {
         grid-template-columns: 1fr;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 36px;
       }
 
       .hero p {
-        font-size: 18px;
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -176,7 +177,7 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Raddar Agronegócios">
+    <img src="logo.png">
     <nav>
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
@@ -185,7 +186,7 @@
   </header>
 
   <section class="hero" id="inicio">
-    <div class="hero-content">
+    <div>
       <h1>Perícia & Consultoria Agrícola</h1>
       <p>
         Atuação especializada com rigor técnico, segurança jurídica e excelência em soluções para o agronegócio.
@@ -196,31 +197,31 @@
   <section class="services" id="servicos">
     <div class="section-title">
       <h2>Áreas de Atuação</h2>
-      <p>
-        Soluções técnicas desenvolvidas com metodologia, responsabilidade e foco na realidade do campo.
-      </p>
+      <p>Soluções técnicas desenvolvidas com responsabilidade.</p>
     </div>
+  </section>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Perícia Rural</h3>
-        <p>Atuação técnica em demandas judiciais e extrajudiciais.</p>
+  <section class="contact" id="contato">
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <h2>Contato & Localização</h2>
+
+        <p><strong>Raddar Agronegócios</strong></p>
+        <p>Edifício Aquarius Center</p>
+        <p>Sala 1106</p>
+
+        <p><strong>WhatsApp:</strong> (62) 99930-5405</p>
+        <p><strong>Atendimento:</strong> Goiânia - GO</p>
+        <p><strong>Atuação:</strong> Todo o Brasil</p>
       </div>
 
-      <div class="service-card">
-        <h3>Crédito Rural</h3>
-        <p>Análise técnica e suporte em operações financeiras.</p>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps?q=Edifício+Aquarius+Center&output=embed">
+        </iframe>
       </div>
 
-      <div class="service-card">
-        <h3>Geoprocessamento</h3>
-        <p>Mapeamento e análise por imagens de satélite.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Regularização Ambiental</h3>
-        <p>Adequação ambiental de propriedades rurais.</p>
-      </div>
     </div>
   </section>
 
