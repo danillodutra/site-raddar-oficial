@@ -40,31 +40,27 @@
       text-decoration: none;
       margin-left: 30px;
       font-size: 18px;
-      font-weight: 500;
     }
 
     nav a:hover {
       color: #b8860b;
     }
 
-    /* HERO COM IMAGEM */
     .hero {
       text-align: center;
       padding: 140px 20px;
       position: relative;
-      background: url('fundo.jpg') center/cover no-repeat;
+      background: url('https://raw.githubusercontent.com/danillodutra/site-raddar-oficial/main/fundo.jpg') center/cover no-repeat;
     }
 
-    /* SOBREPOSIÇÃO BRANCA */
     .hero::before {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.85);
-      z-index: 1;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.85);
     }
 
     .hero-content {
@@ -75,16 +71,14 @@
     .hero h1 {
       font-size: 56px;
       margin-bottom: 25px;
-      color: #111111;
-      font-weight: bold;
+      color: #111;
     }
 
     .hero p {
       font-size: 28px;
-      max-width: 950px;
-      margin: 0 auto;
-      color: #444444;
-      line-height: 1.5;
+      max-width: 900px;
+      margin: auto;
+      color: #444;
     }
 
     .services {
@@ -99,63 +93,14 @@
 
     .section-title h2 {
       font-size: 42px;
-      color: #111111;
-      margin-bottom: 15px;
     }
 
     .section-title p {
       font-size: 20px;
-      color: #555555;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
+      color: #555;
     }
 
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-
-    .service-card {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 35px 25px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-      border-top: 4px solid #d4af37;
-      transition: 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
-    }
-
-    .service-card h3 {
-      font-size: 24px;
-      color: #111111;
-      margin-bottom: 15px;
-    }
-
-    .service-card p {
-      font-size: 17px;
-      color: #555555;
-      line-height: 1.7;
-    }
-
-    @media (max-width: 1100px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 700px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
+    @media (max-width: 900px) {
       .hero h1 {
         font-size: 36px;
       }
@@ -169,7 +114,7 @@
 <body>
 
   <header>
-    <img src="logo.png" alt="Raddar Agronegócios">
+    <img src="logo.png">
     <nav>
       <a href="#inicio">Início</a>
       <a href="#servicos">Serviços</a>
@@ -183,45 +128,6 @@
       <p>
         Atuação especializada com rigor técnico, segurança jurídica e excelência em soluções para o agronegócio.
       </p>
-    </div>
-  </section>
-
-  <section class="services" id="servicos">
-    <div class="section-title">
-      <h2>Áreas de Atuação</h2>
-      <p>
-        Soluções técnicas desenvolvidas com metodologia, responsabilidade e foco na realidade do campo.
-      </p>
-    </div>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Perícia Rural</h3>
-        <p>
-          Atuação técnica em demandas judiciais e extrajudiciais.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Crédito Rural</h3>
-        <p>
-          Análise técnica e suporte em operações financeiras.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Geoprocessamento</h3>
-        <p>
-          Mapeamento e análise por imagens de satélite.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Regularização Ambiental</h3>
-        <p>
-          Adequação ambiental de propriedades rurais.
-        </p>
-      </div>
     </div>
   </section>
 
