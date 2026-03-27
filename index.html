@@ -15,13 +15,13 @@ body {
 
 header {
     background: #000;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     border-bottom: 2px solid #c59d2f;
 }
 
 .logo {
-    max-width: 260px;
+    max-width: 220px;
 }
 
 .hero {
@@ -43,12 +43,13 @@ header {
 .btn {
     display: inline-block;
     margin-top: 30px;
-    padding: 14px 28px;
-    background: #c1272d; /* vermelho da marca */
+    padding: 14px 30px;
+    background: #c1272d;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -62,7 +63,7 @@ header {
 
 .section h2 {
     color: #c59d2f;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .cards {
@@ -78,10 +79,16 @@ header {
     border-radius: 10px;
     width: 260px;
     border: 1px solid #1e1e1e;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #c1272d;
 }
 
 .card h3 {
-    color: #0f5d2f; /* verde da marca */
+    color: #0f5d2f;
 }
 
 footer {
@@ -98,7 +105,7 @@ footer {
 <body>
 
 <header>
-    <img src="logo.png" class="logo">
+    <img src="https://raw.githubusercontent.com/danillodutra/site-raddar-oficial/main/logo.png" class="logo">
 </header>
 
 <section class="hero">
@@ -106,6 +113,7 @@ footer {
     <p>
         Atuação técnica em perícia rural, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.
     </p>
+
     <a class="btn" href="https://wa.me/5562999305405" target="_blank">
         Falar no WhatsApp
     </a>
