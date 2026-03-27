@@ -2,40 +2,31 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serviços - Raddar</title>
+<title>Serviços</title>
 
 <style>
 body {font-family: Arial; margin:0;}
-header {
-display:flex; justify-content:space-between; padding:20px 40px;
-border-bottom:2px solid #d4af37;
-}
-header img {height:45px;}
+header {display:flex; justify-content:space-between; padding:20px 40px; border-bottom:2px solid #d4af37;}
 nav a {margin-left:30px; text-decoration:none; color:#000;}
 
-.container {padding:80px 40px; max-width:1200px; margin:auto;}
-h1 {font-size:42px; margin-bottom:40px;}
-
-.grid {
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:30px;
-}
+.container {padding:80px 40px; max-width:1100px; margin:auto;}
 
 .card {
-background:#fff;
-padding:30px;
+padding:40px;
 border-top:4px solid #d4af37;
 box-shadow:0 5px 15px rgba(0,0,0,0.05);
+margin-bottom:30px;
+cursor:pointer;
 }
+
+.card:hover {transform:translateY(-3px);}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo.png">
+<img src="logo.png" height="45">
 <nav>
 <a href="index.html">Início</a>
 <a href="servicos.html">Serviços</a>
@@ -44,31 +35,14 @@ box-shadow:0 5px 15px rgba(0,0,0,0.05);
 </header>
 
 <div class="container">
+
 <h1>Áreas de Atuação</h1>
 
-<div class="grid">
-
-<div class="card">
-<h3>Perícia Rural</h3>
+<div class="card" onclick="location.href='pericia.html'">
+<h2>Perícia Rural</h2>
 <p>Atuação técnica em demandas judiciais e extrajudiciais.</p>
 </div>
 
-<div class="card">
-<h3>Crédito Rural</h3>
-<p>Análise técnica e renegociação de operações.</p>
-</div>
-
-<div class="card">
-<h3>Geoprocessamento</h3>
-<p>Mapeamento e análise por imagens de satélite.</p>
-</div>
-
-<div class="card">
-<h3>Regularização Ambiental</h3>
-<p>Adequação ambiental de propriedades rurais.</p>
-</div>
-
-</div>
 </div>
 
 </body>
