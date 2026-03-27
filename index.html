@@ -47,10 +47,29 @@
       color: #b8860b;
     }
 
+    /* HERO COM IMAGEM */
     .hero {
       text-align: center;
-      padding: 120px 20px 140px;
-      background: #ffffff;
+      padding: 140px 20px;
+      position: relative;
+      background: url('fundo.jpg') center/cover no-repeat;
+    }
+
+    /* SOBREPOSIÇÃO BRANCA */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
@@ -63,7 +82,7 @@
     .hero p {
       font-size: 28px;
       max-width: 950px;
-      margin: 0 auto 0;
+      margin: 0 auto;
       color: #444444;
       line-height: 1.5;
     }
@@ -118,7 +137,6 @@
       font-size: 24px;
       color: #111111;
       margin-bottom: 15px;
-      line-height: 1.3;
     }
 
     .service-card p {
@@ -133,20 +151,9 @@
       }
     }
 
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 16px;
-      }
-
-      .hero {
-        padding: 80px 20px 100px;
+    @media (max-width: 700px) {
+      .services-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero h1 {
@@ -155,32 +162,6 @@
 
       .hero p {
         font-size: 20px;
-      }
-
-      .services {
-        padding: 70px 20px;
-      }
-
-      .section-title h2 {
-        font-size: 32px;
-      }
-
-      .section-title p {
-        font-size: 18px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service-card h3 {
-        font-size: 22px;
-      }
-
-      .service-card p {
-        font-size: 16px;
       }
     }
   </style>
@@ -197,10 +178,12 @@
   </header>
 
   <section class="hero" id="inicio">
-    <h1>Perícia & Consultoria Agrícola</h1>
-    <p>
-      Atuação especializada com rigor técnico, segurança jurídica e excelência em soluções para o agronegócio.
-    </p>
+    <div class="hero-content">
+      <h1>Perícia & Consultoria Agrícola</h1>
+      <p>
+        Atuação especializada com rigor técnico, segurança jurídica e excelência em soluções para o agronegócio.
+      </p>
+    </div>
   </section>
 
   <section class="services" id="servicos">
@@ -215,28 +198,28 @@
       <div class="service-card">
         <h3>Perícia Rural</h3>
         <p>
-          Atuação técnica em demandas judiciais e extrajudiciais, com análises fundamentadas e abordagem pericial precisa.
+          Atuação técnica em demandas judiciais e extrajudiciais.
         </p>
       </div>
 
       <div class="service-card">
         <h3>Crédito Rural</h3>
         <p>
-          Suporte técnico em operações de crédito, renegociação, avaliação de capacidade produtiva e análise documental.
+          Análise técnica e suporte em operações financeiras.
         </p>
       </div>
 
       <div class="service-card">
         <h3>Geoprocessamento</h3>
         <p>
-          Mapeamento, análise espacial, interpretação de imagens e produção de materiais técnicos aplicados ao agronegócio.
+          Mapeamento e análise por imagens de satélite.
         </p>
       </div>
 
       <div class="service-card">
         <h3>Regularização Ambiental</h3>
         <p>
-          Apoio técnico em questões ambientais, uso do solo, áreas protegidas e adequação de propriedades rurais.
+          Adequação ambiental de propriedades rurais.
         </p>
       </div>
     </div>
