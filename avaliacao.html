@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Imóveis Rurais | Raddar Agronegócios</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #ffffff;
+      border-bottom: 2px solid #d4af37;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    nav a {
+      color: #1a1a1a;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #b8860b;
+    }
+
+    .page-hero {
+      padding: 90px 40px 50px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #111111;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 21px;
+      color: #555555;
+      line-height: 1.7;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 40px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .main-card,
+    .side-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      border-top: 4px solid #d4af37;
+    }
+
+    .main-card h2,
+    .side-card h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      color: #111111;
+    }
+
+    .main-card p,
+    .side-card p {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+
+    .topics {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .topics li {
+      margin-bottom: 12px;
+      font-size: 17px;
+      color: #333333;
+      line-height: 1.7;
+    }
+
+    .cta-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f8f8f8;
+      border-left: 4px solid #d4af37;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #444444;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      color: #b8860b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #eeeeee;
+      color: #666666;
+      background: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+
+      .page-hero {
+        padding: 70px 20px 40px;
+      }
+
+      .page-hero h1 {
+        font-size: 34px;
+      }
+
+      .page-hero p {
+        font-size: 18px;
+      }
+
+      .content {
+        padding: 50px 20px 70px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-card,
+      .side-card {
+        padding: 28px;
+      }
+
+      .main-card h2,
+      .side-card h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Raddar Agronegócios">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Avaliação de Imóveis Rurais</h1>
+    <p>
+      Atuação técnica especializada na determinação do valor de imóveis rurais, com fundamentação metodológica, análise de mercado e aplicação de critérios compatíveis com a finalidade pericial, judicial ou extrajudicial.
+    </p>
+  </section>
+
+  <section class="content">
+    <div class="content-grid">
+
+      <div class="main-card">
+        <h2>Atuação Técnica</h2>
+
+        <p>
+          A avaliação de imóveis rurais exige análise criteriosa das características do bem, da localização, aptidão agrícola, uso atual, benfeitorias, infraestrutura, acesso, restrições ambientais e comportamento do mercado regional.
+        </p>
+
+        <p>
+          O trabalho técnico deve observar metodologia compatível com a finalidade do laudo, permitindo a apuração de valor de forma objetiva, fundamentada e coerente com a realidade do imóvel avaliado.
+        </p>
+
+        <ul class="topics">
+          <li>Determinação do valor de mercado de imóveis rurais</li>
+          <li>Avaliação para processos judiciais e extrajudiciais</li>
+          <li>Apuração de VTN e análise de componentes do imóvel</li>
+          <li>Consideração de benfeitorias, uso atual e potencial produtivo</li>
+          <li>Análise de fatores locacionais, acesso e infraestrutura</li>
+          <li>Elaboração de laudos técnicos com fundamentação objetiva</li>
+          <li>Suporte técnico para advogados, produtores e partes interessadas</li>
+        </ul>
+
+        <div class="cta-box">
+          A avaliação técnica bem fundamentada é essencial para demonstrar o valor real do imóvel rural e oferecer segurança em negociações, litígios e apurações indenizatórias.
+        </div>
+
+        <a class="back-link" href="pericia.html">← Voltar para Perícia Rural</a>
+      </div>
+
+      <div class="side-card">
+        <h2>Aplicações</h2>
+
+        <p>
+          Esta atuação pode ser aplicada em demandas envolvendo partilhas, desapropriações, garantias, indenizações, revisões patrimoniais, disputas possessórias e demais situações que exijam definição técnica do valor do imóvel rural.
+        </p>
+
+        <p>
+          O laudo pode considerar o contexto econômico da região, a aptidão da terra, o padrão de exploração e os elementos que influenciam diretamente a formação do valor.
+        </p>
+
+        <p>
+          A abordagem técnica é desenvolvida com objetividade, coerência metodológica e adequação à finalidade específica de cada caso.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Raddar Agronegócios
+  </footer>
+
+</body>
+</html>
