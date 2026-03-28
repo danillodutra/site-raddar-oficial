@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultoria Agrícola | Raddar Agronegócios</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #ffffff;
+      border-bottom: 2px solid #d4af37;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    nav a {
+      color: #1a1a1a;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #b8860b;
+    }
+
+    .page-hero {
+      padding: 90px 40px 50px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #111111;
+      line-height: 1.2;
+    }
+
+    .page-hero p {
+      max-width: 920px;
+      margin: 0 auto;
+      font-size: 21px;
+      color: #555555;
+      line-height: 1.7;
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 70px 40px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .main-card,
+    .side-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      border-top: 4px solid #d4af37;
+    }
+
+    .main-card h2,
+    .side-card h2 {
+      font-size: 28px;
+      margin-bottom: 18px;
+      color: #111111;
+    }
+
+    .main-card p,
+    .side-card p {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+
+    .topics {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .topics li {
+      margin-bottom: 12px;
+      font-size: 17px;
+      color: #333333;
+      line-height: 1.7;
+    }
+
+    .cta-box {
+      margin-top: 30px;
+      padding: 20px;
+      background: #f8f8f8;
+      border-left: 4px solid #d4af37;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #444444;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      color: #b8860b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #eeeeee;
+      color: #666666;
+      background: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 16px;
+      }
+
+      .page-hero {
+        padding: 70px 20px 40px;
+      }
+
+      .page-hero h1 {
+        font-size: 34px;
+      }
+
+      .page-hero p {
+        font-size: 18px;
+      }
+
+      .content {
+        padding: 50px 20px 70px;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-card,
+      .side-card {
+        padding: 28px;
+      }
+
+      .main-card h2,
+      .side-card h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Raddar Agronegócios">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <h1>Consultoria Agrícola</h1>
+    <p>
+      Atuação técnica voltada ao planejamento, acompanhamento e tomada de decisão no agronegócio, com foco em produtividade, manejo, viabilidade e soluções aplicadas à realidade do campo.
+    </p>
+  </section>
+
+  <section class="content">
+    <div class="content-grid">
+
+      <div class="main-card">
+        <h2>Atuação Técnica</h2>
+
+        <p>
+          A consultoria agrícola envolve análise técnica da propriedade, do sistema produtivo e das condições operacionais, com o objetivo de orientar decisões mais seguras e eficientes no campo. O trabalho considera fatores agronômicos, produtivos, econômicos e estratégicos ligados à atividade rural.
+        </p>
+
+        <p>
+          A atuação pode abranger desde o planejamento da atividade até o acompanhamento técnico de áreas em produção, sempre com abordagem prática, fundamentada e compatível com a realidade de cada imóvel rural.
+        </p>
+
+        <ul class="topics">
+          <li>Orientação técnica para manejo e condução de lavouras</li>
+          <li>Acompanhamento de áreas agrícolas e avaliação de campo</li>
+          <li>Análise de viabilidade e planejamento produtivo</li>
+          <li>Suporte técnico para tomada de decisão no agronegócio</li>
+          <li>Diagnóstico de problemas produtivos e operacionais</li>
+          <li>Avaliação técnica de sistemas de produção</li>
+          <li>Consultoria aplicada a demandas específicas do produtor rural</li>
+        </ul>
+
+        <div class="cta-box">
+          A consultoria agrícola bem estruturada contribui para decisões mais assertivas, melhor aproveitamento técnico da área e maior segurança na condução da atividade rural.
+        </div>
+
+        <a class="back-link" href="servicos.html">← Voltar para Serviços</a>
+      </div>
+
+      <div class="side-card">
+        <h2>Aplicações</h2>
+
+        <p>
+          Esta atuação pode ser aplicada em propriedades voltadas à produção agrícola, pecuária ou sistemas mistos, sempre com foco em melhoria de desempenho, organização técnica e adequação das estratégias produtivas.
+        </p>
+
+        <p>
+          O suporte técnico também pode auxiliar em fases de implantação, reestruturação, identificação de falhas de manejo, definição de prioridades e avaliação de oportunidades no imóvel rural.
+        </p>
+
+        <p>
+          A abordagem é desenvolvida com base em análise prática, conhecimento técnico e direcionamento compatível com os objetivos do produtor e da propriedade.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    Raddar Agronegócios
+  </footer>
+
+</body>
+</html>
