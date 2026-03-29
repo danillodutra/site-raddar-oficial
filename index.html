@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raddar Agronegócios</title>
 
+  <!-- FONTE PROFISSIONAL -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -61,18 +62,23 @@
     .titulo {
       font-weight: 700;
       color: #111;
-      letter-spacing: 1px;
+      text-align: center;
     }
 
-    .linha1 {
-      display: block;
-      font-size: 26px;
-    }
-
+    .linha1,
     .linha2 {
       display: block;
       font-size: 26px;
-      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    /* LINHA ENTRE OS TEXTOS */
+    .divisor {
+      display: block;
+      width: 140px;
+      height: 2px;
+      background: rgba(201,166,70,0.8);
+      margin: 10px auto;
     }
 
     .subtitulo {
@@ -98,6 +104,10 @@
         font-size: 36px;
       }
 
+      .divisor {
+        width: 200px;
+      }
+
       .hero {
         min-height: 85vh;
       }
@@ -111,6 +121,7 @@
 
 <body>
 
+  <!-- NAVBAR -->
   <header>
     <img src="logo.png" alt="Raddar Agronegócios">
     <nav>
@@ -120,10 +131,12 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div>
       <h1 class="titulo">
-        <span class="linha1">PERÍCIA •</span>
+        <span class="linha1">PERÍCIA</span>
+        <span class="divisor"></span>
         <span class="linha2">CONSULTORIA</span>
       </h1>
 
@@ -133,6 +146,7 @@
     </div>
   </section>
 
+  <!-- RODAPÉ -->
   <footer>
     Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
   </footer>
