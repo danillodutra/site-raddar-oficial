@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raddar Agronegócios</title>
 
-  <!-- FONTE PROFISSIONAL -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -26,65 +25,85 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
+      padding: 12px 20px;
       border-bottom: 2px solid #c9a646;
     }
 
     header img {
-      height: 38px;
+      height: 34px;
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 12px;
       text-decoration: none;
       color: #222;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 13px;
     }
 
     /* HERO */
     .hero {
-      height: 85vh;
+      min-height: 70vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
 
-      background: linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
-                  url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
+      background:
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+
       background-size: cover;
       background-position: center;
     }
 
     /* TÍTULO */
     .titulo {
-      font-size: 36px;
       font-weight: 700;
-      letter-spacing: 1px;
       color: #111;
+      letter-spacing: 1px;
+    }
+
+    .linha1 {
+      display: block;
+      font-size: 26px;
+    }
+
+    .linha2 {
+      display: block;
+      font-size: 26px;
+      margin-top: 5px;
     }
 
     .subtitulo {
-      margin-top: 18px;
-      font-size: 16px;
+      margin-top: 15px;
+      font-size: 14px;
       color: #555;
+      line-height: 1.4;
     }
 
     /* RODAPÉ */
     footer {
       text-align: center;
-      padding: 25px;
-      font-size: 13px;
+      padding: 15px;
+      font-size: 12px;
       color: #777;
       background: #ffffff;
-      border-top: 1px solid #eee;
     }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .titulo {
-        font-size: 26px;
+    /* DESKTOP */
+    @media (min-width: 768px) {
+      .linha1,
+      .linha2 {
+        font-size: 36px;
+      }
+
+      .hero {
+        min-height: 85vh;
+      }
+
+      .subtitulo {
+        font-size: 16px;
       }
     }
   </style>
@@ -92,7 +111,6 @@
 
 <body>
 
-  <!-- NAVBAR -->
   <header>
     <img src="logo.png" alt="Raddar Agronegócios">
     <nav>
@@ -102,11 +120,11 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <div>
       <h1 class="titulo">
-        PERÍCIA • CONSULTORIA
+        <span class="linha1">PERÍCIA •</span>
+        <span class="linha2">CONSULTORIA</span>
       </h1>
 
       <p class="subtitulo">
@@ -115,7 +133,6 @@
     </div>
   </section>
 
-  <!-- RODAPÉ -->
   <footer>
     Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
   </footer>
