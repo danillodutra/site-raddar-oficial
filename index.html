@@ -14,7 +14,7 @@
     }
 
     body {
-      background-color: #f5f5f5;
+      background-color: #f2f2f2;
     }
 
     /* NAVBAR */
@@ -23,7 +23,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 12px 20px;
       border-bottom: 2px solid #c9a646;
     }
 
@@ -36,64 +36,45 @@
       text-decoration: none;
       color: #333;
       font-size: 14px;
-      font-weight: 500;
     }
 
     /* HERO */
     .hero {
-      height: 85vh;
+      height: 80vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 20px;
 
-      /* leve fundo profissional */
-      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+      background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
                   url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
       background-size: cover;
       background-position: center;
     }
 
     .titulo {
-      font-weight: 700;
       line-height: 1.3;
     }
 
     .linha1 {
       display: block;
-      font-size: 32px;
+      font-size: 34px;
+      font-weight: 700;
       color: #000;
     }
 
     .linha2 {
       display: block;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 500;
       color: #333;
     }
 
     .subtitulo {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #555;
-    }
-
-    /* BOTÃO */
-    .botao {
-      margin-top: 25px;
-      display: inline-block;
-      background: #c9a646;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .botao:hover {
-      background: #a8882f;
+      margin-top: 12px;
+      font-size: 15px;
+      color: #666;
     }
 
     /* RODAPÉ */
@@ -105,18 +86,14 @@
       background: #ffffff;
     }
 
-    /* RESPONSIVO */
+    /* MOBILE */
     @media (max-width: 600px) {
       .linha1 {
         font-size: 28px;
       }
 
       .linha2 {
-        font-size: 20px;
-      }
-
-      nav a {
-        font-size: 12px;
+        font-size: 22px;
       }
     }
   </style>
@@ -145,8 +122,6 @@
       <p class="subtitulo">
         Atuação especializada com rigor técnico e segurança jurídica.
       </p>
-
-      <a href="#" class="botao">Fale com um especialista</a>
     </div>
   </section>
 
