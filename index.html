@@ -1,134 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raddar Agronegócios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raddar Agronegócios</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  color: #111;
-}
+    body {
+      background-color: #f5f5f5;
+    }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  border-bottom: 2px solid #d4af37;
-}
+    /* NAVBAR */
+    header {
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #c9a646;
+    }
 
-header img {
-  height: 35px;
-}
+    header img {
+      height: 35px;
+    }
 
-nav {
-  display: flex;
-  gap: 20px;
-}
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
-}
+    /* HERO */
+    .hero {
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
 
-/* HERO */
-.hero {
-  height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  text-align: center;
-  background: #f5f5f5;
-}
+      /* leve fundo profissional */
+      background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                  url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
+      background-size: cover;
+      background-position: center;
+    }
 
-.hero h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
+    .titulo {
+      font-weight: 700;
+      line-height: 1.3;
+    }
 
-.hero p {
-  font-size: 18px;
-  color: #555;
-  max-width: 500px;
-}
+    .linha1 {
+      display: block;
+      font-size: 32px;
+      color: #000;
+    }
 
-/* MOBILE */
-@media (max-width: 768px) {
+    .linha2 {
+      display: block;
+      font-size: 24px;
+      font-weight: 500;
+      color: #333;
+    }
 
-  header {
-    flex-direction: row;
-  }
+    .subtitulo {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #555;
+    }
 
-  nav {
-    gap: 15px;
-  }
+    /* BOTÃO */
+    .botao {
+      margin-top: 25px;
+      display: inline-block;
+      background: #c9a646;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
 
-  .hero {
-    height: 80vh;
-  }
+    .botao:hover {
+      background: #a8882f;
+    }
 
-  .hero h1 {
-    font-size: 28px;
-  }
+    /* RODAPÉ */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      background: #ffffff;
+    }
 
-  .hero p {
-    font-size: 16px;
-  }
+    /* RESPONSIVO */
+    @media (max-width: 600px) {
+      .linha1 {
+        font-size: 28px;
+      }
 
-}
+      .linha2 {
+        font-size: 20px;
+      }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
-  border-top: 1px solid #eee;
-}
-</style>
-
+      nav a {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png">
+  <!-- NAVBAR -->
+  <header>
+    <img src="logo.png" alt="Raddar Agronegócios">
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1 class="titulo">
+        <span class="linha1">Perícia</span>
+        <span class="linha2">& Consultoria Agrícola</span>
+      </h1>
 
-<section class="hero">
+      <p class="subtitulo">
+        Atuação especializada com rigor técnico e segurança jurídica.
+      </p>
 
-  <h1>
-    Perícia & Consultoria<br>
-    Agrícola
-  </h1>
+      <a href="#" class="botao">Fale com um especialista</a>
+    </div>
+  </section>
 
-  <p>
-    Atuação especializada com rigor técnico e segurança jurídica.
-  </p>
-
-</section>
-
-<footer>
-Raddar Agronegócios
-</footer>
+  <!-- RODAPÉ -->
+  <footer>
+    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+  </footer>
 
 </body>
 </html>
