@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raddar Agronegócios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raddar Agronegócios</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
+body {
+  font-family: Arial, sans-serif;
+  color: #111;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      border-bottom: 2px solid #d4af37;
-    }
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 2px solid #d4af37;
+}
 
-    header img {
-      height: 45px;
-    }
+header img {
+  height: 35px;
+}
 
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #000;
-      font-size: 18px;
-    }
+nav {
+  display: flex;
+  gap: 20px;
+}
 
-    /* HERO */
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
 
-    .hero {
-      padding: 100px 40px 80px;
-      background: #f5f5f5;
-      text-align: center;
-    }
+/* HERO */
+.hero {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f5f5f5;
+}
 
-    .hero h1 {
-      font-size: 56px;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
 
-    .hero p {
-      font-size: 22px;
-      color: #555;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
-    }
+.hero p {
+  font-size: 18px;
+  color: #555;
+  max-width: 500px;
+}
 
-    /* MOBILE */
-    @media (max-width: 768px) {
+/* MOBILE */
+@media (max-width: 768px) {
 
-      .hero {
-        padding: 80px 20px 60px;
-      }
+  header {
+    flex-direction: row;
+  }
 
-      .hero h1 {
-        font-size: 32px;
-      }
+  nav {
+    gap: 15px;
+  }
 
-      .hero p {
-        font-size: 17px;
-      }
+  .hero {
+    height: 80vh;
+  }
 
-    }
+  .hero h1 {
+    font-size: 28px;
+  }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #eee;
-      color: #666;
-    }
+  .hero p {
+    font-size: 16px;
+  }
 
-  </style>
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  border-top: 1px solid #eee;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
   <img src="logo.png">
+
   <nav>
     <a href="index.html">Início</a>
     <a href="servicos.html">Serviços</a>
