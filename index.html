@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raddar Agronegócios</title>
 
+  <!-- FONTE PROFISSIONAL -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     body {
-      background-color: #f2f2f2;
+      background-color: #f4f4f4;
     }
 
     /* NAVBAR */
@@ -23,31 +26,32 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      padding: 15px 30px;
       border-bottom: 2px solid #c9a646;
     }
 
     header img {
-      height: 35px;
+      height: 38px;
     }
 
     nav a {
-      margin-left: 15px;
+      margin-left: 20px;
       text-decoration: none;
-      color: #333;
+      color: #222;
       font-size: 14px;
+      font-weight: 500;
     }
 
     /* HERO */
     .hero {
-      height: 80vh;
+      height: 85vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       padding: 20px;
 
-      background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+      background: linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
                   url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');
       background-size: cover;
       background-position: center;
@@ -55,45 +59,32 @@
 
     /* TÍTULO */
     .titulo {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 700;
-      line-height: 1.4;
-      color: #000;
-    }
-
-    .titulo span {
-      display: block;
-    }
-
-    .e {
-      font-size: 28px;
-      font-weight: 400;
-      margin: 5px 0;
+      letter-spacing: 1px;
+      color: #111;
     }
 
     .subtitulo {
-      margin-top: 15px;
-      font-size: 15px;
-      color: #666;
+      margin-top: 18px;
+      font-size: 16px;
+      color: #555;
     }
 
     /* RODAPÉ */
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 25px;
+      font-size: 13px;
       color: #777;
       background: #ffffff;
+      border-top: 1px solid #eee;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
       .titulo {
         font-size: 26px;
-      }
-
-      .e {
-        font-size: 22px;
       }
     }
   </style>
@@ -115,9 +106,7 @@
   <section class="hero">
     <div>
       <h1 class="titulo">
-        <span>PERÍCIA</span>
-        <span class="e">&</span>
-        <span>CONSULTORIA</span>
+        PERÍCIA • CONSULTORIA
       </h1>
 
       <p class="subtitulo">
