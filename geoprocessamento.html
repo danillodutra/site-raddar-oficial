@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TÍTULO DA PÁGINA | Raddar Agronegócios</title>
+<title>Geoprocessamento | Raddar Agronegócios</title>
 
 <style>
 * {
@@ -44,27 +44,62 @@ nav a:hover {
 
 /* CONTAINER */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 80px auto;
     padding: 40px;
-    background: #fff;
-    border-radius: 15px;
 }
 
-/* TITULO */
+/* TÍTULO */
 h1 {
     text-align: center;
+    margin-bottom: 40px;
+    font-size: 34px;
+}
+
+/* BLOCO INTRO */
+.intro {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 30px;
+    border-left: 5px solid #caa24c;
+}
+
+/* GRID DE SERVIÇOS */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* TÍTULOS DOS CARDS */
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #caa24c;
 }
 
 /* TEXTO */
-p {
-    margin-bottom: 20px;
+.card p {
+    font-size: 14px;
     line-height: 1.6;
-    text-align: justify;
 }
 
-/* VOLTAR */
+/* BOTÃO VOLTAR */
 .voltar {
     display: block;
     text-align: center;
@@ -81,10 +116,10 @@ footer {
     color: #777;
 }
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -103,21 +138,51 @@ footer {
 
 <div class="container">
 
-    <h1>TÍTULO DA PÁGINA</h1>
+    <h1>Geoprocessamento</h1>
 
-    <p>
-        TEXTO PRINCIPAL DO SERVIÇO. Aqui você explica com linguagem técnica e profissional.
-    </p>
+    <div class="intro">
+        O geoprocessamento aplicado à área rural garante precisão técnica na delimitação de imóveis,
+        segurança jurídica e atendimento às exigências dos órgãos competentes, sendo essencial
+        para regularização fundiária e certificação de áreas.
+    </div>
 
-    <p>
-        Complemento explicando metodologia, atuação e importância do serviço.
-    </p>
+    <div class="grid">
 
-    <p>
-        Destaque para aplicação prática, segurança jurídica e resultados ao cliente.
-    </p>
+        <div class="card">
+            <h2>Georreferenciamento de Imóveis Rurais</h2>
+            <p>
+                Levantamento técnico e geoespacial conforme exigências do INCRA,
+                garantindo a correta definição dos limites da propriedade.
+            </p>
+        </div>
 
-    <a href="geoprocessamento.html" class="voltar">← Voltar para Geoprocessamento</a>
+        <div class="card">
+            <h2>Regularização junto ao INCRA</h2>
+            <p>
+                Adequação do imóvel às normas legais, incluindo certificação,
+                atualização cadastral e atendimento às exigências fundiárias.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Atendimento à Legislação</h2>
+            <p>
+                Trabalhos realizados conforme a Lei nº 10.267/2001 e demais
+                normativas que regulam a medição e registro de imóveis rurais.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Processamento e Análise de Dados</h2>
+            <p>
+                Utilização de técnicas avançadas de geoprocessamento para análise
+                cartográfica e geração de produtos técnicos confiáveis.
+            </p>
+        </div>
+
+    </div>
+
+    <a href="servicos.html" class="voltar">← Voltar para Serviços</a>
 
 </div>
 
