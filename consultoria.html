@@ -1,118 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoria Agrícola | Raddar Agronegócios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria Agrícola | Raddar Agronegócios</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
+body {
+    background-color: #f5f5f5;
+}
 
-        header {
-            background: white;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #caa24c;
-        }
+header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #caa24c;
+}
 
-        header img {
-            height: 35px;
-        }
+header img {
+    height: 35px;
+}
 
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
 
-        nav a:hover {
-            color: #caa24c;
-        }
+.container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 50px;
+    border-radius: 15px;
 
-        .container {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
+    /* 🔥 MARCA D'ÁGUA AQUI */
+    background: 
+        url('alvo.png') no-repeat center,
+        rgba(255,255,255,0.95);
 
-        h1 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 32px;
-        }
+    background-size: 350px;
+    background-blend-mode: overlay;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-        .card {
-            background: #fff;
-            padding: 50px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #e0e0e0;
-            text-decoration: none;
-            color: #333;
-            font-size: 20px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border: 1px solid #caa24c;
-        }
+.card {
+    background: #fff;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-        .voltar {
-            display: block;
-            text-align: center;
-            margin-top: 50px;
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-        }
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid #caa24c;
+}
 
-        footer {
-            text-align: center;
-            margin: 60px 0 30px;
-            font-size: 14px;
-            color: #777;
-        }
+.voltar {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    text-decoration: none;
+    color: #333;
+}
 
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
+footer {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 14px;
+    color: #777;
+}
 
-            header {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    </style>
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png" alt="Raddar Agronegócios">
-
+    <img src="logo.png">
     <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
@@ -124,15 +119,8 @@
     <h1>Áreas de Consultoria</h1>
 
     <div class="grid">
-
-        <a href="agricultura-precisao.html" class="card">
-            Agricultura de Precisão
-        </a>
-
-        <a href="consultoria-lavouras.html" class="card">
-            Consultoria Agrícola
-        </a>
-
+        <a href="agricultura-precisao.html" class="card">Agricultura de Precisão</a>
+        <a href="consultoria-lavouras.html" class="card">Consultoria Agrícola</a>
     </div>
 
     <a href="servicos.html" class="voltar">← Voltar para Serviços</a>
