@@ -19,7 +19,7 @@ body{
 color:#222;
 
 background:
-linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
 url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
 
 background-size:cover;
@@ -27,10 +27,28 @@ background-position:center;
 background-attachment:fixed;
 }
 
+/* MARCA D’ÁGUA */
+body::after{
+content:'';
+position:fixed;
+top:50%;
+left:50%;
+width:500px;
+height:500px;
+background:url('alvo.png') no-repeat center;
+background-size:contain;
+opacity:0.04;
+transform:translate(-50%,-50%);
+pointer-events:none;
+z-index:0;
+}
+
 /* HEADER */
 header{
 background:#fff;
 border-bottom:2px solid #c9a646;
+position:relative;
+z-index:2;
 }
 
 .topo{
@@ -48,13 +66,19 @@ height:34px;
 
 nav{
 display:flex;
-gap:24px;
+gap:28px;
 }
 
 nav a{
 text-decoration:none;
 color:#222;
 font-size:15px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#c9a646;
 }
 
 nav a.ativo{
@@ -66,51 +90,55 @@ font-weight:600;
 .pagina{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:70px 20px;
+position:relative;
+z-index:2;
 }
 
 /* TÍTULO */
 .titulo{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:45px;
 }
 
 .titulo h1{
-font-size:36px;
+font-size:38px;
 margin-bottom:10px;
+letter-spacing:0.5px;
 }
 
 .titulo p{
 color:#666;
 max-width:700px;
 margin:auto;
-line-height:1.6;
+line-height:1.7;
+font-size:16px;
 }
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:25px;
+gap:28px;
 }
 
-/* CARD PROFISSIONAL */
+/* CARD */
 .card{
 text-decoration:none;
 color:#222;
 
 background:rgba(255,255,255,0.85);
-backdrop-filter:blur(6px);
+backdrop-filter:blur(8px);
 
-border-radius:12px;
-padding:30px;
+border-radius:14px;
+padding:34px;
 text-align:center;
-font-size:20px;
+font-size:21px;
 font-weight:600;
 
 border:1px solid rgba(0,0,0,0.05);
 
-transition:0.3s;
+transition:0.35s;
 cursor:pointer;
 position:relative;
 overflow:hidden;
@@ -129,26 +157,36 @@ background:#c9a646;
 
 /* HOVER */
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 30px rgba(0,0,0,0.12);
+transform:translateY(-8px);
+box-shadow:0 18px 40px rgba(0,0,0,0.15);
 background:rgba(255,255,255,0.95);
-color:#000;
 }
 
 /* FOOTER */
 footer{
 background:#fff;
 text-align:center;
-padding:18px;
+padding:20px;
 font-size:13px;
 color:#777;
-margin-top:40px;
+margin-top:50px;
+position:relative;
+z-index:2;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 .grid{
 grid-template-columns:1fr;
+}
+
+.titulo h1{
+font-size:30px;
+}
+
+.card{
+font-size:18px;
+padding:26px;
 }
 }
 </style>
