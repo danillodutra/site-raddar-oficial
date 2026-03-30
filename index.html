@@ -1,100 +1,176 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raddar Agronegócios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raddar Agronegócios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body {
+      background: #f4f4f4;
+      color: #222;
+    }
 
-body{background:#f4f4f4;}
+    header {
+      background: #fff;
+      border-bottom: 2px solid #c9a646;
+    }
 
-header{
-background:#fff;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px 20px;
-border-bottom:2px solid #c9a646;
-}
+    .topo {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-header img{height:34px;}
+    .logo img {
+      height: 34px;
+      display: block;
+    }
 
-nav a{
-margin-left:15px;
-text-decoration:none;
-color:#222;
-font-size:14px;
-}
+    nav {
+      display: flex;
+      gap: 24px;
+    }
 
-/* HERO */
-.hero{
-min-height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 15px;
+      font-weight: 500;
+    }
 
-.linha1,.linha2{
-font-size:30px;
-font-weight:700;
-}
+    nav a:hover {
+      color: #c9a646;
+    }
 
-.divisor{
-width:140px;
-height:2px;
-background:#c9a646;
-margin:10px auto;
-}
+    .hero {
+      min-height: calc(100vh - 67px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+    }
 
-.subtitulo{
-margin-top:15px;
-font-size:15px;
-color:#555;
-}
+    .hero-conteudo {
+      max-width: 700px;
+    }
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:15px;
-font-size:13px;
-background:#fff;
-margin-top:40px;
-}
-</style>
+    .linha1,
+    .linha2 {
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.15;
+    }
+
+    .divisor {
+      width: 160px;
+      height: 2px;
+      background: #c9a646;
+      margin: 14px auto;
+    }
+
+    .subtitulo {
+      margin-top: 14px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 18px 20px;
+      font-size: 13px;
+      color: #777;
+      border-top: 1px solid #ececec;
+    }
+
+    @media (max-width: 768px) {
+      .topo {
+        padding: 12px 16px;
+      }
+
+      .logo img {
+        height: 28px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: calc(100vh - 59px);
+        padding: 30px 18px;
+      }
+
+      .linha1,
+      .linha2 {
+        font-size: 28px;
+      }
+
+      .divisor {
+        width: 130px;
+      }
+
+      .subtitulo {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<img src="logo.png" alt="Raddar">
-<nav>
-<a href="/index.html">Início</a>
-<a href="/servicos.html">Serviços</a>
-<a href="/contato.html">Contato</a>
-</nav>
-</header>
+  <header>
+    <div class="topo">
+      <a class="logo" href="index.html">
+        <img src="logo.png" alt="Raddar Agronegócios">
+      </a>
 
-<section class="hero">
-<div>
-<div class="linha1">PERÍCIA</div>
-<div class="divisor"></div>
-<div class="linha2">CONSULTORIA</div>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-<p class="subtitulo">
-Atuação especializada com rigor técnico e segurança jurídica.
-</p>
-</div>
-</section>
+  <main class="hero">
+    <div class="hero-conteudo">
+      <div class="linha1">PERÍCIA</div>
+      <div class="divisor"></div>
+      <div class="linha2">CONSULTORIA</div>
 
-<footer>
-Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-</footer>
+      <p class="subtitulo">
+        Atuação especializada com rigor técnico e segurança jurídica.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+  </footer>
 
 </body>
 </html>
