@@ -57,14 +57,11 @@ h1 {
 
 .card {
     background: #fff;
-    padding: 50px;
     border-radius: 15px;
-    text-align: center;
+    overflow: hidden;
     border: 1px solid #e0e0e0;
     text-decoration: none;
     color: #333;
-    font-size: 20px;
-    font-weight: 600;
     transition: 0.3s;
 }
 
@@ -72,6 +69,18 @@ h1 {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     border: 1px solid #caa24c;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
 }
 
 .voltar {
@@ -112,8 +121,17 @@ footer {
     <h1>Áreas de Consultoria</h1>
 
     <div class="grid">
-        <a href="agricultura-precisao.html" class="card">Agricultura de Precisão</a>
-        <a href="consultoria-lavouras.html" class="card">Consultoria Agrícola</a>
+
+        <a href="agricultura-precisao.html" class="card">
+            <img src="agricultura-precisao.png" alt="Agricultura de Precisão">
+            <h2>Agricultura de Precisão</h2>
+        </a>
+
+        <a href="consultoria-lavouras.html" class="card">
+            <img src="consultoria-agricola.png" alt="Consultoria Agrícola">
+            <h2>Consultoria Agrícola</h2>
+        </a>
+
     </div>
 
     <a href="servicos.html" class="voltar">← Voltar para Serviços</a>
