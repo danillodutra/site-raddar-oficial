@@ -1,196 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consultoria Agrícola | Raddar Agronegócios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria Agrícola | Raddar Agronegócios</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-    }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: #ffffff;
-      border-bottom: 2px solid #d4af37;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        header {
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #caa24c;
+        }
 
-    header img {
-      height: 45px;
-    }
+        header img {
+            height: 35px;
+        }
 
-    nav a {
-      color: #1a1a1a;
-      text-decoration: none;
-      margin-left: 30px;
-      font-size: 18px;
-      font-weight: 500;
-    }
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
 
-    nav a:hover {
-      color: #b8860b;
-    }
+        nav a:hover {
+            color: #caa24c;
+        }
 
-    .page-hero {
-      padding: 90px 40px 50px;
-      background: #f8f8f8;
-      text-align: center;
-    }
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-    .page-hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+        }
 
-    .page-hero p {
-      max-width: 900px;
-      margin: auto;
-      font-size: 20px;
-      color: #555;
-      line-height: 1.7;
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
 
-    .services {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 40px;
-    }
+        .card {
+            background: #fff;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-    .services h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border: 1px solid #caa24c;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 25px;
-    }
+        .voltar {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
 
-    .card {
-      height: 140px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.3s;
-      background: #ffffff;
-    }
+        footer {
+            text-align: center;
+            margin: 60px 0 30px;
+            font-size: 14px;
+            color: #777;
+        }
 
-    .card:hover {
-      border-color: #d4af37;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-    .card h3 {
-      font-size: 22px;
-      text-align: center;
-      padding: 0 10px;
-    }
-
-    .back {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .back a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #eee;
-      color: #666;
-    }
-
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .page-hero h1 {
-        font-size: 34px;
-      }
-
-      .page-hero p {
-        font-size: 18px;
-      }
-    }
-  </style>
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png">
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="contato.html">Contato</a>
-  </nav>
+    <img src="logo.png" alt="Raddar Agronegócios">
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 </header>
 
-<section class="page-hero">
-  <h1>Consultoria Agrícola</h1>
-  <p>
-    Atuação técnica voltada ao planejamento, acompanhamento e tomada de decisão no agronegócio, com foco em produtividade, manejo, previsões e soluções aplicadas à realidade do campo.
-  </p>
-</section>
+<div class="container">
+    <h1>Áreas de Consultoria</h1>
 
-<section class="services">
+    <div class="grid">
 
-  <h2>Áreas de Consultoria</h2>
+        <a href="agricultura-precisao.html" class="card">
+            Agricultura de Precisão
+        </a>
 
-  <div class="grid">
+        <a href="consultoria-lavouras.html" class="card">
+            Consultoria Agrícola
+        </a>
 
-    <div class="card" onclick="location.href='agricultura-precisao.html'">
-      <h3>Agricultura de Precisão</h3>
     </div>
 
-    <div class="card" onclick="location.href='consultoria-lavouras.html'">
-      <h3>Consultoria de Lavouras</h3>
-    </div>
-
-    <div class="card" onclick="location.href='manejo-recomendacao.html'">
-      <h3>Manejo e Recomendação Técnica</h3>
-    </div>
-
-    <div class="card" onclick="location.href='planejamento-safra.html'">
-      <h3>Planejamento e Acompanhamento de Safra</h3>
-    </div>
-
-  </div>
-
-  <div class="back">
-    <a href="servicos.html">← Voltar para Serviços</a>
-  </div>
-
-</section>
+    <a href="servicos.html" class="voltar">← Voltar para Serviços</a>
+</div>
 
 <footer>
-Raddar Agronegócios
+    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
 </footer>
 
 </body>
