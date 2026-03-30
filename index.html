@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raddar Agronegócios</title>
 
-  <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,16 +15,10 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px; /* CORREÇÃO DO MENU */
-    }
-
     body {
       background-color: #f4f4f4;
     }
 
-    /* NAVBAR */
     header {
       background: #ffffff;
       display: flex;
@@ -33,9 +26,6 @@
       align-items: center;
       padding: 12px 20px;
       border-bottom: 2px solid #c9a646;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     header img {
@@ -47,17 +37,15 @@
       text-decoration: none;
       color: #222;
       font-size: 13px;
-      font-weight: 500;
     }
 
-    /* HERO */
     .hero {
-      min-height: 70vh;
+      min-height: 80vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
 
       background:
         linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
@@ -67,23 +55,15 @@
       background-position: center;
     }
 
-    .titulo {
+    .linha1, .linha2 {
+      font-size: 28px;
       font-weight: 700;
-      color: #111;
-    }
-
-    .linha1,
-    .linha2 {
-      display: block;
-      font-size: 26px;
-      letter-spacing: 1px;
     }
 
     .divisor {
-      display: block;
       width: 140px;
       height: 2px;
-      background: rgba(201,166,70,0.8);
+      background: #c9a646;
       margin: 10px auto;
     }
 
@@ -91,123 +71,43 @@
       margin-top: 15px;
       font-size: 14px;
       color: #555;
-      line-height: 1.4;
     }
 
-    /* SEÇÕES */
-    section {
-      padding: 60px 20px;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .titulo-secao {
-      font-size: 22px;
-      margin-bottom: 20px;
-      color: #111;
-    }
-
-    .texto {
-      font-size: 14px;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    /* RODAPÉ */
     footer {
       text-align: center;
       padding: 15px;
       font-size: 12px;
-      color: #777;
-      background: #ffffff;
-    }
-
-    /* DESKTOP */
-    @media (min-width: 768px) {
-      .linha1,
-      .linha2 {
-        font-size: 36px;
-      }
-
-      .divisor {
-        width: 200px;
-      }
-
-      .hero {
-        min-height: 85vh;
-      }
-
-      .titulo-secao {
-        font-size: 26px;
-      }
-
-      .texto {
-        font-size: 16px;
-      }
+      background: #fff;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- MENU -->
-  <header>
-    <img src="logo.png" alt="Raddar Agronegócios">
-    <nav>
-      <a href="#">Início</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+<header>
+  <img src="logo.png">
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+</header>
 
-  <!-- TOPO -->
-  <section class="hero">
-    <div>
-      <h1 class="titulo">
-        <span class="linha1">PERÍCIA</span>
-        <span class="divisor"></span>
-        <span class="linha2">CONSULTORIA</span>
-      </h1>
+<section class="hero">
+  <div>
+    <div class="linha1">PERÍCIA</div>
+    <div class="divisor"></div>
+    <div class="linha2">CONSULTORIA</div>
 
-      <p class="subtitulo">
-        Atuação especializada com rigor técnico e segurança jurídica.
-      </p>
-    </div>
-  </section>
+    <p class="subtitulo">
+      Atuação especializada com rigor técnico e segurança jurídica.
+    </p>
+  </div>
+</section>
 
-  <!-- SERVIÇOS -->
-  <section id="servicos" style="background:#ffffff;">
-    <div class="container">
-      <h2 class="titulo-secao">Serviços</h2>
-
-      <p class="texto">
-        Perícia judicial agronômica, avaliações rurais conforme a NBR 14.653,
-        geoprocessamento aplicado e consultoria técnica especializada.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato">
-    <div class="container">
-      <h2 class="titulo-secao">Contato</h2>
-
-      <p class="texto">
-        📞 (64) 99999-9999<br>
-        📧 contato@raddaragronegocios.com.br<br>
-        📍 Goiânia - GO
-      </p>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer>
-    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-  </footer>
+<footer>
+  Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
 
 </body>
 </html>
