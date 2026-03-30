@@ -19,7 +19,6 @@
       background: #f4f4f4;
     }
 
-    /* MENU */
     header {
       background: #fff;
       display: flex;
@@ -38,10 +37,8 @@
       text-decoration: none;
       color: #222;
       font-size: 13px;
-      font-weight: 500;
     }
 
-    /* CONTAINER */
     .container {
       padding: 40px 20px;
       max-width: 1100px;
@@ -54,50 +51,62 @@
       gap: 25px;
     }
 
-    /* CARD */
     .card {
       background: #fff;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
     }
 
     .card h3 {
       padding: 18px;
-      font-size: 18px;
       text-align: center;
-      color: #111;
+      font-size: 18px;
     }
 
-    /* RODAPÉ */
+    /* PERÍCIA (JUSTIÇA) */
+    .justica {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8f8f8;
+    }
+
+    .justica img {
+      width: 80px;
+      opacity: 0.8;
+    }
+
+    /* GEOPROCESSAMENTO (DUAS IMAGENS) */
+    .geo {
+      display: flex;
+      height: 200px;
+    }
+
+    .geo img {
+      width: 50%;
+      object-fit: cover;
+    }
+
+    /* IMAGEM PADRÃO */
+    .img-full {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       font-size: 13px;
       color: #777;
       background: #ffffff;
-      border-top: 1px solid #eee;
     }
 
-    /* DESKTOP */
     @media (min-width: 768px) {
       .grid {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .card img {
-        height: 220px;
       }
     }
   </style>
@@ -106,7 +115,7 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Raddar Agronegócios">
+  <img src="logo.png">
   <nav>
     <a href="index.html">Início</a>
     <a href="servicos.html">Serviços</a>
@@ -119,25 +128,30 @@
 
     <!-- PERÍCIA -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1598514982846-1cf8f7b3c3c3?auto=format&fit=crop&w=1200&q=80">
+      <div class="justica">
+        <img src="justica.png">
+      </div>
       <h3>Perícia Rural</h3>
     </div>
 
     <!-- CONSULTORIA -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80">
+      <img class="img-full" src="consultoria.jpg">
       <h3>Consultoria Agrícola</h3>
     </div>
 
     <!-- GEOPROCESSAMENTO -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581093458791-9d15482442f7?auto=format&fit=crop&w=1200&q=80">
+      <div class="geo">
+        <img src="drone.webp">
+        <img src="gnss.png">
+      </div>
       <h3>Geoprocessamento</h3>
     </div>
 
     <!-- REGULARIZAÇÃO -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80">
+      <img class="img-full" src="documentos.jpg">
       <h3>Regularização de Imóveis Rurais</h3>
     </div>
 
