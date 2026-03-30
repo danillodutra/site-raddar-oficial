@@ -50,9 +50,8 @@ color:#222;
 font-size:15px;
 }
 
-nav a.ativo{
+nav a:hover{
 color:#c9a646;
-font-weight:600;
 }
 
 /* CONTEÚDO */
@@ -83,6 +82,9 @@ border-top:3px solid #c9a646;
 font-weight:600;
 transition:0.3s;
 cursor:pointer;
+text-decoration:none;
+color:#222;
+display:block;
 }
 
 .card:hover{
@@ -98,13 +100,11 @@ font-size:26px;
 text-align:center;
 }
 
-/* vira lista (1 coluna) */
 .grid{
 grid-template-columns:1fr;
 gap:15px;
 }
 
-/* cards mais compactos */
 .card{
 padding:18px;
 font-size:15px;
@@ -127,7 +127,7 @@ font-size:14px;
 <header>
 <div class="topo">
 <div class="logo">
-<img src="logo.png">
+<img src="logo.png" alt="Raddar">
 </div>
 
 <nav>
@@ -144,17 +144,29 @@ font-size:14px;
 
 <div class="grid">
 
-<div class="card">Servidão Administrativa</div>
+<a href="servidao.html" class="card">
+Servidão Administrativa
+</a>
 
-<div class="card">Avaliação de Imóveis Rurais</div>
+<a href="avaliacao.html" class="card">
+Avaliação de Imóveis Rurais
+</a>
 
-<div class="card">Frustração de Safra (Lavouras)</div>
+<a href="frustracao-safra.html" class="card">
+Frustração de Safra (Lavouras)
+</a>
 
-<div class="card">Redução da Capacidade Produtiva Pecuária</div>
+<a href="pecuaria.html" class="card">
+Redução da Capacidade Produtiva Pecuária
+</a>
 
 </div>
 
 </div>
+
+<footer style="text-align:center; padding:20px; font-size:13px; color:#777;">
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
 
 </body>
 </html>
