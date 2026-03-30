@@ -38,9 +38,10 @@
       text-decoration: none;
       color: #222;
       font-size: 13px;
+      font-weight: 500;
     }
 
-    /* GRID */
+    /* CONTAINER */
     .container {
       padding: 40px 20px;
       max-width: 1100px;
@@ -50,7 +51,7 @@
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 25px;
     }
 
     /* CARD */
@@ -59,7 +60,6 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      text-align: center;
       transition: 0.3s;
     }
 
@@ -74,15 +74,30 @@
     }
 
     .card h3 {
-      padding: 15px;
+      padding: 18px;
       font-size: 18px;
+      text-align: center;
       color: #111;
+    }
+
+    /* RODAPÉ */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #777;
+      background: #ffffff;
+      border-top: 1px solid #eee;
     }
 
     /* DESKTOP */
     @media (min-width: 768px) {
       .grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .card img {
+        height: 220px;
       }
     }
   </style>
@@ -91,7 +106,7 @@
 <body>
 
 <header>
-  <img src="logo.png">
+  <img src="logo.png" alt="Raddar Agronegócios">
   <nav>
     <a href="index.html">Início</a>
     <a href="servicos.html">Serviços</a>
@@ -104,30 +119,34 @@
 
     <!-- PERÍCIA -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092919537-3a7b2c3c3c3c?auto=format&fit=crop&w=800&q=80">
+      <img src="https://images.unsplash.com/photo-1598514982846-1cf8f7b3c3c3?auto=format&fit=crop&w=1200&q=80">
       <h3>Perícia Rural</h3>
     </div>
 
     <!-- CONSULTORIA -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1598514982846-1cf8f7b3c3c3?auto=format&fit=crop&w=800&q=80">
+      <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=1200&q=80">
       <h3>Consultoria Agrícola</h3>
     </div>
 
     <!-- GEOPROCESSAMENTO -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d15482442f7?auto=format&fit=crop&w=1200&q=80">
       <h3>Geoprocessamento</h3>
     </div>
 
     <!-- REGULARIZAÇÃO -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?auto=format&fit=crop&w=800&q=80">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80">
       <h3>Regularização de Imóveis Rurais</h3>
     </div>
 
   </div>
 </div>
+
+<footer>
+  Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
 
 </body>
 </html>
