@@ -17,8 +17,9 @@ body {
     background-color: #f5f5f5;
 }
 
+/* HEADER */
 header {
-    background: white;
+    background: #fff;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -41,30 +42,64 @@ nav a:hover {
     color: #caa24c;
 }
 
+/* CONTAINER */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 80px auto;
     padding: 40px;
-    background: #fff;
-    border-radius: 15px;
 }
 
+/* TÍTULO */
 h1 {
     text-align: center;
+    margin-bottom: 40px;
+    font-size: 34px;
+}
+
+/* BLOCO INTRO */
+.intro {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
     margin-bottom: 30px;
+    border-left: 5px solid #caa24c;
 }
 
-p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    text-align: justify;
+/* GRID DE SERVIÇOS */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.destaque {
-    font-weight: bold;
+/* CARD */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* TÍTULOS DOS CARDS */
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
     color: #caa24c;
 }
 
+/* TEXTO */
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* BOTÃO VOLTAR */
 .voltar {
     display: block;
     text-align: center;
@@ -73,6 +108,7 @@ p {
     color: #333;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     margin: 40px 0;
@@ -80,10 +116,10 @@ footer {
     color: #777;
 }
 
+/* RESPONSIVO */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -104,29 +140,47 @@ footer {
 
     <h1>Geoprocessamento</h1>
 
-    <p>
-        O serviço de <span class="destaque">geoprocessamento</span> é essencial para a correta 
-        delimitação, análise e regularização de imóveis rurais, garantindo segurança técnica e jurídica 
-        ao produtor e às partes envolvidas.
-    </p>
+    <div class="intro">
+        O geoprocessamento aplicado à área rural garante precisão técnica na delimitação de imóveis,
+        segurança jurídica e atendimento às exigências dos órgãos competentes, sendo essencial
+        para regularização fundiária e certificação de áreas.
+    </div>
 
-    <p>
-        Atuamos com <span class="destaque">georreferenciamento de imóveis rurais</span>, elaboração de 
-        peças técnicas e adequação às exigências dos órgãos competentes, com foco na 
-        <span class="destaque">regularização junto ao INCRA</span>.
-    </p>
+    <div class="grid">
 
-    <p>
-        Os trabalhos são desenvolvidos em conformidade com as normativas vigentes, incluindo a 
-        <span class="destaque">Lei nº 10.267/2001</span> e regulamentações complementares, que tratam 
-        da medição, certificação e registro de áreas rurais no território nacional.
-    </p>
+        <div class="card">
+            <h2>Georreferenciamento de Imóveis Rurais</h2>
+            <p>
+                Levantamento técnico e geoespacial conforme exigências do INCRA,
+                garantindo a correta definição dos limites da propriedade.
+            </p>
+        </div>
 
-    <p>
-        A metodologia empregada envolve levantamento de campo, processamento de dados geoespaciais, 
-        análise cartográfica e geração de produtos técnicos com precisão e confiabilidade, 
-        atendendo aos padrões exigidos pelos órgãos oficiais.
-    </p>
+        <div class="card">
+            <h2>Regularização junto ao INCRA</h2>
+            <p>
+                Adequação do imóvel às normas legais, incluindo certificação,
+                atualização cadastral e atendimento às exigências fundiárias.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Atendimento à Legislação</h2>
+            <p>
+                Trabalhos realizados conforme a Lei nº 10.267/2001 e demais
+                normativas que regulam a medição e registro de imóveis rurais.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Processamento e Análise de Dados</h2>
+            <p>
+                Utilização de técnicas avançadas de geoprocessamento para análise
+                cartográfica e geração de produtos técnicos confiáveis.
+            </p>
+        </div>
+
+    </div>
 
     <a href="servicos.html" class="voltar">← Voltar para Serviços</a>
 
