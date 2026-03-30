@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raddar Agronegócios</title>
 
-  <!-- FONTE PROFISSIONAL -->
+  <!-- FONTE -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -14,6 +14,10 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Montserrat', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -28,6 +32,9 @@
       align-items: center;
       padding: 12px 20px;
       border-bottom: 2px solid #c9a646;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header img {
@@ -39,6 +46,7 @@
       text-decoration: none;
       color: #222;
       font-size: 13px;
+      font-weight: 500;
     }
 
     /* HERO */
@@ -58,11 +66,9 @@
       background-position: center;
     }
 
-    /* TÍTULO */
     .titulo {
       font-weight: 700;
       color: #111;
-      text-align: center;
     }
 
     .linha1,
@@ -72,7 +78,6 @@
       letter-spacing: 1px;
     }
 
-    /* LINHA ENTRE OS TEXTOS */
     .divisor {
       display: block;
       width: 140px;
@@ -86,6 +91,29 @@
       font-size: 14px;
       color: #555;
       line-height: 1.4;
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .titulo-secao {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .texto {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
     }
 
     /* RODAPÉ */
@@ -112,7 +140,11 @@
         min-height: 85vh;
       }
 
-      .subtitulo {
+      .titulo-secao {
+        font-size: 26px;
+      }
+
+      .texto {
         font-size: 16px;
       }
     }
@@ -126,8 +158,8 @@
     <img src="logo.png" alt="Raddar Agronegócios">
     <nav>
       <a href="#">Início</a>
-      <a href="#">Serviços</a>
-      <a href="#">Contato</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
     </nav>
   </header>
 
@@ -142,6 +174,31 @@
 
       <p class="subtitulo">
         Atuação especializada com rigor técnico e segurança jurídica.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" style="background:#ffffff;">
+    <div class="container">
+      <h2 class="titulo-secao">Serviços</h2>
+
+      <p class="texto">
+        Atuação em perícia judicial agronômica, avaliações rurais conforme a NBR 14.653,
+        geoprocessamento aplicado e consultoria técnica especializada no agronegócio.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <h2 class="titulo-secao">Contato</h2>
+
+      <p class="texto">
+        📞 (64) 99999-9999<br>
+        📧 contato@raddaragronegocios.com.br<br>
+        📍 Goiânia - GO
       </p>
     </div>
   </section>
