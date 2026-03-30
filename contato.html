@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato | Raddar Agronegócios</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -26,7 +27,7 @@
 
     .topo {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
       padding: 14px 20px;
       display: flex;
       justify-content: space-between;
@@ -35,7 +36,6 @@
 
     .logo img {
       height: 34px;
-      display: block;
     }
 
     nav {
@@ -47,131 +47,122 @@
       text-decoration: none;
       color: #222;
       font-size: 15px;
-      font-weight: 500;
     }
 
-    nav a:hover,
     nav a.ativo {
       color: #c9a646;
+      font-weight: 600;
     }
 
     .pagina {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 50px 20px 60px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
       text-align: center;
+      margin-bottom: 10px;
+      font-size: 32px;
     }
 
-    .pagina h1 {
-      font-size: 34px;
-      margin-bottom: 14px;
-    }
-
-    .pagina p.intro {
-      max-width: 680px;
-      margin: 0 auto 30px;
-      font-size: 16px;
-      line-height: 1.7;
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
       color: #666;
     }
 
-    .bloco-contato {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-      padding: 32px 24px;
-      border-top: 3px solid #c9a646;
-      max-width: 620px;
-      margin: 0 auto;
+    .contato-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
-    .item {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
+    .info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border-top: 3px solid #c9a646;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .info p {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      border: none;
+      border-radius: 10px;
     }
 
     footer {
       background: #fff;
       text-align: center;
-      padding: 18px 20px;
+      padding: 18px;
       font-size: 13px;
       color: #777;
-      border-top: 1px solid #ececec;
+      margin-top: 40px;
     }
 
     @media (max-width: 768px) {
-      .topo {
-        padding: 12px 16px;
-      }
-
-      .logo img {
-        height: 28px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
-      .pagina {
-        padding: 35px 16px 45px;
-      }
-
-      .pagina h1 {
-        font-size: 28px;
-      }
-
-      .pagina p.intro {
-        font-size: 15px;
-      }
-
-      .bloco-contato {
-        padding: 26px 18px;
-      }
-
-      .item {
-        font-size: 16px;
+      .contato-box {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="topo">
-      <a class="logo" href="index.html">
-        <img src="logo.png" alt="Raddar Agronegócios">
-      </a>
-
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a class="ativo" href="contato.html">Contato</a>
-      </nav>
+<header>
+  <div class="topo">
+    <div class="logo">
+      <img src="logo.png">
     </div>
-  </header>
 
-  <main class="pagina">
-    <h1>Contato</h1>
-    <p class="intro">
-      Entre em contato para informações sobre atuação técnica, perícias,
-      consultoria e serviços especializados no agronegócio.
-    </p>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a class="ativo" href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="bloco-contato">
-      <div class="item">SEU TELEFONE</div>
-      <div class="item">SEU E-MAIL</div>
-      <div class="item">SUA CIDADE / ESTADO</div>
+<div class="pagina">
+
+  <h1>Contato</h1>
+
+  <p class="intro">
+    Entre em contato para informações sobre perícias, consultoria e serviços técnicos especializados.
+  </p>
+
+  <div class="contato-box">
+
+    <!-- DADOS -->
+    <div class="info">
+      <p><strong>Telefone:</strong> (64) 99999-9999</p>
+      <p><strong>Email:</strong> contato@raddaragronegocios.com.br</p>
+      <p><strong>Localização:</strong> Goiânia - GO</p>
     </div>
-  </main>
 
-  <footer>
-    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-  </footer>
+    <!-- MAPA -->
+    <div>
+      <iframe 
+        src="https://www.google.com/maps?q=Goiânia%20GO&output=embed">
+      </iframe>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
 
 </body>
 </html>
