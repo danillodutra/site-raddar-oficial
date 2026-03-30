@@ -5,50 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviços | Raddar Agronegócios</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
 
 body{
+background:#f4f4f4;
 color:#222;
-
-background:
-linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
-url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
-
-/* MARCA D’ÁGUA */
-body::after{
-content:'';
-position:fixed;
-top:50%;
-left:50%;
-width:500px;
-height:500px;
-background:url('alvo.png') no-repeat center;
-background-size:contain;
-opacity:0.04;
-transform:translate(-50%,-50%);
-pointer-events:none;
-z-index:0;
 }
 
 /* HEADER */
 header{
 background:#fff;
 border-bottom:2px solid #c9a646;
-position:relative;
-z-index:2;
 }
 
 .topo{
@@ -60,25 +30,14 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo img{
-height:34px;
-}
+.logo img{height:34px;}
 
-nav{
-display:flex;
-gap:28px;
-}
+nav{display:flex;gap:24px;}
 
 nav a{
 text-decoration:none;
 color:#222;
 font-size:15px;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#c9a646;
 }
 
 nav a.ativo{
@@ -90,104 +49,93 @@ font-weight:600;
 .pagina{
 max-width:1100px;
 margin:auto;
-padding:70px 20px;
-position:relative;
-z-index:2;
+padding:60px 20px;
 }
 
 /* TÍTULO */
 .titulo{
 text-align:center;
-margin-bottom:45px;
+margin-bottom:40px;
 }
 
 .titulo h1{
-font-size:38px;
+font-size:36px;
 margin-bottom:10px;
-letter-spacing:0.5px;
 }
 
 .titulo p{
 color:#666;
 max-width:700px;
 margin:auto;
-line-height:1.7;
-font-size:16px;
+line-height:1.6;
 }
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:28px;
+gap:25px;
 }
 
 /* CARD */
 .card{
-text-decoration:none;
-color:#222;
-
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(8px);
-
-border-radius:14px;
-padding:34px;
-text-align:center;
-font-size:21px;
-font-weight:600;
-
-border:1px solid rgba(0,0,0,0.05);
-
-transition:0.35s;
-cursor:pointer;
 position:relative;
+border-radius:12px;
 overflow:hidden;
+height:200px;
+text-decoration:none;
+color:#fff;
+display:flex;
+align-items:flex-end;
+transition:0.3s;
 }
 
-/* LINHA SUPERIOR */
-.card::before{
-content:'';
+/* IMAGEM */
+.card img{
 position:absolute;
 top:0;
 left:0;
 width:100%;
-height:3px;
-background:#c9a646;
+height:100%;
+object-fit:cover;
+}
+
+/* OVERLAY */
+.card::after{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+}
+
+/* TEXTO */
+.card span{
+position:relative;
+z-index:2;
+padding:20px;
+font-size:20px;
+font-weight:600;
 }
 
 /* HOVER */
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 18px 40px rgba(0,0,0,0.15);
-background:rgba(255,255,255,0.95);
+transform:scale(1.03);
 }
 
 /* FOOTER */
 footer{
 background:#fff;
 text-align:center;
-padding:20px;
+padding:18px;
 font-size:13px;
 color:#777;
-margin-top:50px;
-position:relative;
-z-index:2;
+margin-top:40px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-.grid{
-grid-template-columns:1fr;
-}
-
-.titulo h1{
-font-size:30px;
-}
-
-.card{
-font-size:18px;
-padding:26px;
-}
+.grid{grid-template-columns:1fr;}
 }
 </style>
 
@@ -221,13 +169,25 @@ consultoria agrícola, geoprocessamento e regularização de imóveis rurais.
 
 <div class="grid">
 
-<a href="pericia.html" class="card">Perícia Rural</a>
+<a href="pericia.html" class="card">
+<img src="pericia.jpg" alt="Perícia Rural">
+<span>Perícia Rural</span>
+</a>
 
-<a href="consultoria.html" class="card">Consultoria Agrícola</a>
+<a href="consultoria.html" class="card">
+<img src="consultoria.jpg" alt="Consultoria">
+<span>Consultoria Agrícola</span>
+</a>
 
-<a href="geoprocessamento.html" class="card">Geoprocessamento</a>
+<a href="geoprocessamento.html" class="card">
+<img src="geoprocessamento.jpg" alt="Geoprocessamento">
+<span>Geoprocessamento</span>
+</a>
 
-<a href="regularizacao.html" class="card">Regularização de Imóveis Rurais</a>
+<a href="regularizacao.html" class="card">
+<img src="regularizacao.jpg" alt="Regularização">
+<span>Regularização de Imóveis Rurais</span>
+</a>
 
 </div>
 
