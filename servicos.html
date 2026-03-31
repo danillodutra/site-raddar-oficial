@@ -1,219 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Serviços | Raddar Agronegócios</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<title>Serviços - Raddar</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Montserrat', sans-serif;
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f5f5f5;
 }
 
-body{
-background:#f4f4f4;
-color:#222;
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff;
 }
 
-/* HEADER */
-header{
-background:#fff;
-border-bottom:2px solid #c9a646;
+.menu a {
+    margin: 10px;
+    text-decoration: none;
+    color: #333;
 }
 
-.topo{
-max-width:1200px;
-margin:auto;
-padding:14px 20px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
 }
 
-.logo img{
-height:34px;
+.card {
+    width: 260px;
+    margin: 15px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
 }
 
-nav{
-display:flex;
-gap:24px;
-}
-
-nav a{
-text-decoration:none;
-color:#222;
-font-size:15px;
-}
-
-nav a.ativo{
-color:#c9a646;
-font-weight:600;
-}
-
-/* CONTEÚDO */
-.pagina{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
-
-/* TÍTULO */
-.titulo{
-text-align:center;
-margin-bottom:40px;
-}
-
-.titulo h1{
-font-size:36px;
-margin-bottom:10px;
-}
-
-.titulo p{
-color:#666;
-max-width:700px;
-margin:auto;
-line-height:1.6;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-/* CARD */
-.card{
-position:relative;
-border-radius:12px;
-overflow:hidden;
-height:220px;
-text-decoration:none;
-color:#fff;
-display:flex;
-align-items:flex-end;
-transition:0.3s;
-}
-
-/* IMAGEM */
-.card img{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* OVERLAY */
-.card::after{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
-}
-
-/* TEXTO */
-.card span{
-position:relative;
-z-index:2;
-padding:20px;
-font-size:20px;
-font-weight:600;
-}
-
-/* HOVER */
-.card:hover{
-transform:scale(1.03);
-}
-
-/* FOOTER */
-footer{
-background:#fff;
-text-align:center;
-padding:18px;
-font-size:13px;
-color:#777;
-margin-top:40px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.grid{
-grid-template-columns:1fr;
-}
-.titulo h1{
-font-size:30px;
-}
-.card{
-height:200px;
-}
+.icon {
+    width: 120px;
+    margin-bottom: 15px;
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
-<div class="topo">
-<div class="logo">
-<img src="logo.png" alt="Raddar">
-</div>
-
-<nav>
-<a href="index.html">Início</a>
-<a class="ativo" href="servicos.html">Serviços</a>
-<a href="contato.html">Contato</a>
-</nav>
-</div>
+    <img src="logo.png" height="40">
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+    </nav>
 </header>
 
-<div class="pagina">
+<h2 style="text-align:center;margin-top:40px;">Nossos Serviços</h2>
 
-<div class="titulo">
-<h1>Serviços</h1>
-<p>
-Atuação técnica especializada no agronegócio, com foco em perícia rural,
-consultoria agrícola, geoprocessamento e regularização de imóveis rurais.
-</p>
-</div>
-
-<div class="grid">
+<div class="cards">
 
 <a href="pericia.html" class="card">
-<img src="./pericia.jpg.png" alt="Perícia Rural">
-<span>Perícia Rural</span>
+    <img src="pericia-avaliacao.png" class="icon">
+    <h3>Perícia Rural</h3>
 </a>
 
 <a href="consultoria.html" class="card">
-<img src="./consultoria.jpg.png" alt="Consultoria Agrícola">
-<span>Consultoria Agrícola</span>
+    <img src="consultoria.jpg.png" class="icon">
+    <h3>Consultoria Agrícola</h3>
 </a>
 
 <a href="geoprocessamento.html" class="card">
-<img src="./geoprocessamento.jpg.png" alt="Geoprocessamento">
-<span>Geoprocessamento</span>
+    <img src="geoprocessamento.jpg.png" class="icon">
+    <h3>Geoprocessamento</h3>
 </a>
 
 <a href="regularizacao.html" class="card">
-<img src="./regularizacao.jpg.png" alt="Regularização">
-<span>Regularização de Imóveis Rurais</span>
+    <img src="regularizacao-fundiaria.png" class="icon">
+    <h3>Regularização</h3>
 </a>
 
 </div>
-
-</div>
-
-<footer>
-Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-</footer>
 
 </body>
 </html>
