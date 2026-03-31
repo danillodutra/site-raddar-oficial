@@ -1,27 +1,271 @@
-<div class="cards">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raddar Agronegócios</title>
 
-    <div class="card">
-        <img src="pericia.png" class="icon">
-        <h3>Perícia Rural</h3>
-        <p>Laudos técnicos para processos judiciais.</p>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+header img {
+    height: 45px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+                url('pagina-inicial.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    animation: fadeIn 1.2s ease;
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 14px 30px;
+    background: #c8a96a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b89750;
+}
+
+/* SECTION */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* CARD PREMIUM */
+.card {
+    width: 260px;
+    margin: 15px;
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* EFEITO DOURADO */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(200,169,106,0.2), transparent);
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    height: 100%;
+}
+
+/* ICON */
+.icon {
+    width: 65px;
+    margin-bottom: 15px;
+}
+
+/* DIFERENCIAL */
+.diferencial {
+    background: #fafafa;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp img {
+    width: 65px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVO */
+@media(max-width: 768px){
+    header {
+        padding: 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    nav {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <img src="logo.png">
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
+        <p>Laudos técnicos, avaliação de imóveis rurais e assistência especializada.</p>
+        <a href="contato.html" class="btn">Fale com um especialista</a>
     </div>
+</section>
 
-    <div class="card">
-        <img src="consultor.png" class="icon">
-        <h3>Consultoria Agrícola</h3>
-        <p>Diagnóstico técnico e tomada de decisão.</p>
+<!-- AUTORIDADE -->
+<section class="section">
+    <h2>Atuação Técnica Especializada</h2>
+    <p>Perícia rural judicial, avaliação conforme NBR 14.653 e suporte técnico em processos.</p>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section">
+    <h2>Serviços</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="pericia-avaliacao.png" class="icon">
+            <h3>Perícia Rural</h3>
+            <p>Laudos técnicos para processos judiciais.</p>
+        </div>
+
+        <div class="card">
+            <img src="consultoria.jpg.png" class="icon">
+            <h3>Consultoria Agrícola</h3>
+            <p>Diagnóstico técnico e tomada de decisão.</p>
+        </div>
+
+        <div class="card">
+            <img src="geoprocessamento.jpg.png" class="icon">
+            <h3>Geoprocessamento</h3>
+            <p>Análise com imagens de satélite.</p>
+        </div>
+
+        <div class="card">
+            <img src="regularizacao.jpg" class="icon">
+            <h3>Regularização</h3>
+            <p>Soluções ambientais e fundiárias.</p>
+        </div>
+
     </div>
+</section>
 
-    <div class="card">
-        <img src="geopro.png" class="icon">
-        <h3>Geoprocessamento</h3>
-        <p>Imagens de satélite e análise espacial.</p>
-    </div>
+<!-- DIFERENCIAL -->
+<section class="section diferencial">
+    <h2>Diferencial Técnico</h2>
+    <p>Integração entre campo, dados e processos judiciais com tecnologia aplicada.</p>
+</section>
 
-    <div class="card">
-        <img src="regularizacao.png" class="icon">
-        <h3>Regularização</h3>
-        <p>Soluções ambientais e fundiárias.</p>
-    </div>
+<!-- CTA -->
+<section class="section">
+    <h2>Seu caso precisa de análise técnica</h2>
+    <a href="contato.html" class="btn">Entrar em contato</a>
+</section>
 
+<!-- FOOTER -->
+<footer>
+    <p>Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro</p>
+</footer>
+
+<!-- WHATSAPP -->
+<div class="whatsapp">
+    <a href="https://wa.me/5562999305405" target="_blank">
+        <img src="botao.png">
+    </a>
 </div>
+
+</body>
+</html>
