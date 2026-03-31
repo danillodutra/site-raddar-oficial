@@ -8,25 +8,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-body{background:#f5f5f5;}
+body{
+    background:#f5f5f5;
+}
 
+/* HEADER */
 header{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     padding:20px;
     background:#fff;
     position:fixed;
     width:100%;
+    z-index:1000;
 }
 
+/* MENU */
 .menu a{
     margin:10px;
     text-decoration:none;
     color:#333;
 }
 
+/* INSTAGRAM */
+.social img{
+    width:24px;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.social img:hover{
+    transform:scale(1.2);
+}
+
+/* HERO */
 .hero{
     height:100vh;
     background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('pagina-inicial.png') center/cover;
@@ -37,11 +60,13 @@ header{
     text-align:center;
 }
 
+/* SEÇÕES */
 .section{
     padding:100px 20px;
     text-align:center;
 }
 
+/* CARDS */
 .cards{
     display:flex;
     flex-wrap:wrap;
@@ -63,6 +88,7 @@ header{
     transform:translateY(-10px);
 }
 
+/* IMAGENS */
 .icon{
     width:120px;
     height:120px;
@@ -71,6 +97,7 @@ header{
     margin-bottom:15px;
 }
 
+/* WHATSAPP */
 .whatsapp{
     position:fixed;
     bottom:20px;
@@ -81,58 +108,70 @@ header{
 
 <body>
 
+<!-- HEADER -->
 <header>
-<img src="logo.png" height="40">
-<nav class="menu">
-<a href="index.html">Início</a>
-<a href="servicos.html">Serviços</a>
-<a href="contato.html">Contato</a>
-</nav>
+    <img src="logo.png" height="40">
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <!-- INSTAGRAM -->
+    <div class="social">
+        <a href="https://www.instagram.com/raddar_agronegocios/" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        </a>
+    </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div>
-<h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
-<p>Laudos técnicos e avaliação de imóveis rurais</p>
-</div>
+    <div>
+        <h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
+        <p>Laudos técnicos e avaliação de imóveis rurais</p>
+    </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section class="section">
-<h2>Serviços</h2>
+    <h2>Serviços</h2>
 
-<div class="cards">
+    <div class="cards">
 
-<a href="pericia.html" class="card">
-<img src="pericia-avaliacao.png" class="icon">
-<h3>Perícia Rural</h3>
-<p>Laudos técnicos para processos judiciais.</p>
-</a>
+        <a href="pericia.html" class="card">
+            <img src="pericia-avaliacao.png" class="icon">
+            <h3>Perícia Rural</h3>
+            <p>Laudos técnicos para processos judiciais.</p>
+        </a>
 
-<a href="consultoria.html" class="card">
-<img src="consultoria.jpg.png" class="icon">
-<h3>Consultoria Agrícola</h3>
-<p>Diagnóstico técnico e tomada de decisão.</p>
-</a>
+        <a href="consultoria.html" class="card">
+            <img src="consultoria.jpg.png" class="icon">
+            <h3>Consultoria Agrícola</h3>
+            <p>Diagnóstico técnico e tomada de decisão.</p>
+        </a>
 
-<a href="geoprocessamento.html" class="card">
-<img src="geoprocessamento.jpg.png" class="icon">
-<h3>Geoprocessamento</h3>
-<p>Análise com imagens de satélite.</p>
-</a>
+        <a href="geoprocessamento.html" class="card">
+            <img src="geoprocessamento.jpg.png" class="icon">
+            <h3>Geoprocessamento</h3>
+            <p>Análise com imagens de satélite.</p>
+        </a>
 
-<a href="regularizacao.html" class="card">
-<img src="regularizacao-fundiaria.png" class="icon">
-<h3>Regularização</h3>
-<p>Soluções ambientais e fundiárias.</p>
-</a>
+        <a href="regularizacao.html" class="card">
+            <img src="regularizacao-fundiaria.png" class="icon">
+            <h3>Regularização</h3>
+            <p>Soluções ambientais e fundiárias.</p>
+        </a>
 
-</div>
+    </div>
 </section>
 
+<!-- WHATSAPP -->
 <div class="whatsapp">
-<a href="https://wa.me/5562999305405">
-<img src="botao.png" width="60">
-</a>
+    <a href="https://wa.me/5562999305405">
+        <img src="botao.png" width="60">
+    </a>
 </div>
 
 </body>
