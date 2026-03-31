@@ -5,11 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Raddar Agronegócios</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* HEADER */
@@ -17,9 +20,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 header img {
@@ -30,45 +35,55 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 /* HERO */
 .hero {
-    height: 90vh;
-    background: url('pagina-inicial.png') no-repeat center/cover;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('pagina-inicial.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
+    animation: fadeIn 1.5s ease;
 }
 
 .hero p {
-    font-size: 18px;
     margin: 20px 0;
+    font-size: 18px;
+    animation: fadeIn 2s ease;
 }
 
 .btn {
-    padding: 12px 25px;
+    padding: 14px 30px;
     background: #c8a96a;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #b89750;
 }
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .section h2 {
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 /* CARDS */
@@ -79,24 +94,29 @@ nav a {
 }
 
 .card {
-    width: 250px;
+    width: 260px;
     margin: 15px;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+}
+
+/* DIFERENCIAL */
+.diferencial {
+    background: #f8f8f8;
 }
 
 /* FOOTER */
 footer {
     background: #111;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* WHATSAPP */
@@ -107,13 +127,27 @@ footer {
 }
 
 .whatsapp img {
-    width: 60px;
+    width: 65px;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
 }
 
 /* RESPONSIVO */
 @media(max-width: 768px){
+    header {
+        padding: 15px;
+    }
+
     .hero h1 {
         font-size: 26px;
+    }
+
+    nav {
+        display: none;
     }
 }
 </style>
@@ -135,7 +169,7 @@ footer {
 <section class="hero">
     <div>
         <h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
-        <p>Laudos técnicos, avaliação de imóveis rurais e assistência especializada no agronegócio.</p>
+        <p>Laudos técnicos, avaliação de imóveis rurais e assistência especializada para decisões judiciais e produtivas.</p>
         <a href="contato.html" class="btn">Fale com um especialista</a>
     </div>
 </section>
@@ -151,37 +185,35 @@ footer {
     <h2>Serviços</h2>
 
     <div class="cards">
-
         <div class="card">
             <h3>Perícia Rural</h3>
-            <p>Laudos técnicos para processos judiciais e crédito rural.</p>
+            <p>Laudos técnicos para processos judiciais.</p>
         </div>
 
         <div class="card">
             <h3>Consultoria Agrícola</h3>
-            <p>Diagnóstico técnico e tomada de decisão no campo.</p>
+            <p>Diagnóstico técnico e tomada de decisão.</p>
         </div>
 
         <div class="card">
             <h3>Geoprocessamento</h3>
-            <p>Análises com imagens de satélite e dados espaciais.</p>
+            <p>Imagens de satélite e análise espacial.</p>
         </div>
 
         <div class="card">
-            <h3>Regularização Rural</h3>
-            <p>Soluções ambientais, fundiárias e outorga d’água.</p>
+            <h3>Regularização</h3>
+            <p>Soluções ambientais e fundiárias.</p>
         </div>
-
     </div>
 </section>
 
 <!-- DIFERENCIAL -->
-<section class="section">
+<section class="section diferencial">
     <h2>Diferencial Técnico</h2>
-    <p>Integração entre campo, dados e processos judiciais com uso de tecnologia e metodologia aplicada.</p>
+    <p>Integração entre campo, dados e processos judiciais com tecnologia e metodologia aplicada.</p>
 </section>
 
-<!-- CTA FINAL -->
+<!-- CTA -->
 <section class="section">
     <h2>Seu caso precisa de análise técnica</h2>
     <a href="contato.html" class="btn">Entrar em contato</a>
