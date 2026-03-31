@@ -1,176 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raddar Agronegócios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raddar Agronegócios</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      background: #f4f4f4;
-      color: #222;
-    }
+body {
+    font-family: Arial, sans-serif;
+}
 
-    header {
-      background: #fff;
-      border-bottom: 2px solid #c9a646;
-    }
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #ffffff;
+}
 
-    .topo {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+header a {
+    text-decoration: none;
+    color: #1c2b36;
+    margin-left: 25px;
+}
 
-    .logo img {
-      height: 34px;
-      display: block;
-    }
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.85)),
+                url('pagina-inicial.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
 
-    nav {
-      display: flex;
-      gap: 24px;
-    }
+/* TEXTO */
+.hero-content h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: #1c2b36;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 15px;
-      font-weight: 500;
-    }
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-top: 15px;
+    color: #1c2b36;
+}
 
-    nav a:hover {
-      color: #c9a646;
-    }
+.hero-content p {
+    margin-top: 15px;
+    color: #555;
+}
 
-    .hero {
-      min-height: calc(100vh - 67px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      background:
-        linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
-        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80');
-      background-size: cover;
-      background-position: center;
-    }
+/* LINHA DOURADA ANIMADA */
+.linha {
+    width: 120px;
+    height: 3px;
+    margin: 20px auto;
+    background: linear-gradient(90deg, transparent, #c8a96a, transparent);
+    position: relative;
+    overflow: hidden;
+}
 
-    .hero-conteudo {
-      max-width: 700px;
-    }
+.linha::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: #c8a96a;
+    left: -40px;
+    animation: mover 2s infinite;
+}
 
-    .linha1,
-    .linha2 {
-      font-size: 38px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      line-height: 1.15;
-    }
+@keyframes mover {
+    0% { left: -40px; }
+    100% { left: 120px; }
+}
 
-    .divisor {
-      width: 160px;
-      height: 2px;
-      background: #c9a646;
-      margin: 14px auto;
-    }
+/* LINHAS MODERNAS DE FUNDO */
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(200,169,106,0.08), transparent 70%);
+    pointer-events: none;
+}
 
-    .subtitulo {
-      margin-top: 14px;
-      font-size: 18px;
-      line-height: 1.6;
-      color: #555;
-    }
+/* RESPONSIVO */
+@media(max-width:768px){
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-content h2 { font-size: 1.6rem; }
+}
+</style>
 
-    footer {
-      background: #fff;
-      text-align: center;
-      padding: 18px 20px;
-      font-size: 13px;
-      color: #777;
-      border-top: 1px solid #ececec;
-    }
-
-    @media (max-width: 768px) {
-      .topo {
-        padding: 12px 16px;
-      }
-
-      .logo img {
-        height: 28px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
-      .hero {
-        min-height: calc(100vh - 59px);
-        padding: 30px 18px;
-      }
-
-      .linha1,
-      .linha2 {
-        font-size: 28px;
-      }
-
-      .divisor {
-        width: 130px;
-      }
-
-      .subtitulo {
-        font-size: 15px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="topo">
-      <a class="logo" href="index.html">
-        <img src="logo.png" alt="Raddar Agronegócios">
-      </a>
+<header>
+    <div>
+        <strong>Raddar</strong>
+    </div>
 
-      <nav>
+    <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-      </nav>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>PERÍCIA</h1>
+
+        <div class="linha"></div>
+
+        <h2>CONSULTORIA</h2>
+
+        <p>Atuação especializada com rigor técnico e segurança jurídica.</p>
+
     </div>
-  </header>
 
-  <main class="hero">
-    <div class="hero-conteudo">
-      <div class="linha1">PERÍCIA</div>
-      <div class="divisor"></div>
-      <div class="linha2">CONSULTORIA</div>
-
-      <p class="subtitulo">
-        Atuação especializada com rigor técnico e segurança jurídica.
-      </p>
-    </div>
-  </main>
-
-  <footer>
-    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-  </footer>
+</section>
 
 </body>
 </html>
