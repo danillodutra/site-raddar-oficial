@@ -2,19 +2,203 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Contato</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | Raddar Agronegócios</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1c2b36;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #fff;
+    border-bottom: 2px solid #c8a96a;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #1c2b36;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c8a96a;
+}
+
+/* CONTEÚDO */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* CONTATO COM LOGO */
+.contato-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TEXTO */
+.texto-contato {
+    width: 60%;
+}
+
+/* LOGO DIREITA */
+.logo-contato {
+    width: 160px;
+}
+
+/* MAPA */
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-contato {
+        width: 100%;
+    }
+
+    .logo-contato {
+        margin-top: 20px;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
+<header>
+
+<div class="logo">
+    <img src="logo.png">
+</div>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+</nav>
+
+</header>
+
+<div class="container">
+
 <h1>Contato</h1>
+<p class="subtitulo">
+Entre em contato para informações sobre perícias e consultoria.
+</p>
 
-<p>Telefone: (62) 99930-5405</p>
+<div class="grid">
 
-<a href="https://wa.me/5562999305405">Falar no WhatsApp</a>
+<!-- CONTATO -->
+<div class="card contato-card">
 
-<br><br>
-<a href="index.html">Voltar</a>
+<div class="texto-contato">
+
+<strong>Telefone:</strong>
+<p>
+<a href="https://wa.me/5562999305405" target="_blank">
+(62) 99930-5405
+</a>
+</p>
+
+<strong>Endereço:</strong>
+<p>
+Edifício Aquarius Center<br>
+Rua T-36, Setor Bueno<br>
+Goiânia - GO<br>
+Sala 1106
+</p>
+
+<a href="https://www.google.com/maps?q=Edifício+Aquarius+Center+Goiânia" target="_blank">
+Ver no Google Maps
+</a>
+
+</div>
+
+<!-- LOGO NA DIREITA (DENTRO DA MESMA CAIXA) -->
+<img src="logo.png" class="logo-contato">
+
+</div>
+
+<!-- MAPA (SEPARADO, COMO ERA) -->
+<div class="mapa">
+<iframe src="https://www.google.com/maps?q=Edifício+Aquarius+Center+Goiânia&output=embed"></iframe>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</div>
 
 </body>
 </html>
