@@ -14,15 +14,17 @@
 
 body {
     font-family: Arial, sans-serif;
+    color: #1c2b36;
 }
 
-/* NAVBAR */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background: #ffffff;
+    border-bottom: 2px solid #c8a96a;
 }
 
 /* LOGO */
@@ -36,13 +38,18 @@ nav a {
     color: #1c2b36;
     margin-left: 25px;
     font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c8a96a;
 }
 
 /* HERO */
 .hero {
     height: 90vh;
     background: 
-        linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.75)),
+        linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.65)),
         url("pagina-inicial.png") center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -50,52 +57,49 @@ nav a {
     text-align: center;
 }
 
-/* TEXTO */
+/* TEXTO PRINCIPAL */
 .hero-content h1 {
     font-size: 3rem;
-    letter-spacing: 3px;
-    color: #1c2b36;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 
 .hero-content h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: 600;
     margin-top: 10px;
 }
 
+/* LINHA DOURADA */
+.linha {
+    width: 90px;
+    height: 2px;
+    background: #c8a96a;
+    margin: 18px auto;
+}
+
+/* TEXTO APOIO */
 .hero-content p {
     margin-top: 10px;
     color: #555;
 }
 
-/* LINHA ANIMADA */
-.linha {
-    width: 120px;
-    height: 3px;
-    margin: 20px auto;
-    background: #c8a96a;
-    position: relative;
-    overflow: hidden;
-}
-
-.linha::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 100%;
-    background: white;
-    left: -40px;
-    animation: animar 2s infinite;
-}
-
-@keyframes animar {
-    0% { left: -40px; }
-    100% { left: 120px; }
+/* RODAPÉ */
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #777;
+    background: #ffffff;
 }
 
 /* RESPONSIVO */
 @media(max-width:768px){
-    .hero-content h1 { font-size: 2rem; }
-    .hero-content h2 { font-size: 1.5rem; }
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 2rem;
+    }
 }
 </style>
 
@@ -105,35 +109,37 @@ nav a {
 
 <header>
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img src="logo.png" alt="Raddar">
-    </div>
+<div class="logo">
+    <img src="logo.png" alt="Raddar">
+</div>
 
-    <!-- MENU -->
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="#">Contato</a>
-    </nav>
+<nav>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="#">Contato</a>
+</nav>
 
 </header>
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <h1>PERÍCIA</h1>
+    <h1>PERÍCIA</h1>
 
-        <div class="linha"></div>
+    <div class="linha"></div>
 
-        <h2>CONSULTORIA</h2>
+    <h2>CONSULTORIA</h2>
 
-        <p>Atuação especializada com rigor técnico e segurança jurídica.</p>
+    <p>Atuação especializada com rigor técnico e segurança jurídica.</p>
 
-    </div>
+</div>
 
 </section>
+
+<div class="footer">
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</div>
 
 </body>
 </html>
