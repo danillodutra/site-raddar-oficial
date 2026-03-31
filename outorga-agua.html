@@ -3,52 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Outorga d’água - Raddar</title>
+<title>Outorga d’água | Raddar Agronegócios</title>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f6f8;
+    color: #1c2b36;
 }
 
 .container {
-    padding: 30px;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 40px 30px 20px;
 }
 
 h1 {
     text-align: center;
-    color: #1c2b36;
+    font-size: 2.2rem;
     margin-bottom: 30px;
 }
 
-.imagem-topo {
+.hero-img {
     width: 100%;
-    height: 250px;
-    background: url('outorga-agua.png') center/cover no-repeat;
-    border-radius: 12px;
-    margin-bottom: 30px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    margin-bottom: 26px;
 }
 
-.box {
+.intro-box {
     background: #ffffff;
-    padding: 25px;
     border-left: 5px solid #c8a96a;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    margin-bottom: 28px;
 }
 
-ul {
-    padding-left: 20px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #d19a2a;
+    margin-bottom: 10px;
 }
 
 .voltar {
-    display: block;
     text-align: center;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #1c2b36;
+    margin: 35px 0;
+}
+
+.footer {
+    text-align: center;
+    color: #7b7f86;
+    padding-bottom: 20px;
+}
+
+@media(max-width:900px){
+    .grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -59,24 +86,68 @@ ul {
 
 <h1>Outorga d’água</h1>
 
-<div class="imagem-topo"></div>
+<img src="outorga-agua.png" class="hero-img">
 
-<div class="box">
+<div class="intro-box">
 <p>
-Assessoria técnica completa para regularização do uso de recursos hídricos, garantindo segurança jurídica e conformidade com os órgãos ambientais.
+Assessoria técnica especializada na regularização do uso de recursos hídricos em propriedades rurais, garantindo segurança jurídica, conformidade ambiental e viabilidade produtiva.
 </p>
-
-<ul>
-<li>Solicitação de outorga de uso da água</li>
-<li>Regularização de captação superficial e subterrânea</li>
-<li>Projetos para irrigação</li>
-<li>Acompanhamento de processos junto aos órgãos competentes</li>
-<li>Suporte técnico para crédito rural</li>
-</ul>
 </div>
 
-<a href="regularizacao.html" class="voltar">← Voltar</a>
+<div class="grid">
 
+<div class="card">
+<h2>Solicitação de Outorga</h2>
+<p>
+Elaboração e protocolo de pedidos de outorga junto aos órgãos competentes, atendendo exigências técnicas e legais.
+</p>
+</div>
+
+<div class="card">
+<h2>Regularização de Captação</h2>
+<p>
+Adequação de captação de água superficial e subterrânea, garantindo uso regular e evitando sanções ambientais.
+</p>
+</div>
+
+<div class="card">
+<h2>Projetos de Irrigação</h2>
+<p>
+Suporte técnico para dimensionamento hídrico e regularização de sistemas de irrigação.
+</p>
+</div>
+
+<div class="card">
+<h2>Acompanhamento de Processos</h2>
+<p>
+Monitoramento de processos junto aos órgãos ambientais até a emissão da outorga.
+</p>
+</div>
+
+<div class="card">
+<h2>Suporte para Crédito Rural</h2>
+<p>
+Adequação documental para financiamentos que exigem regularidade hídrica.
+</p>
+</div>
+
+<div class="card">
+<h2>Segurança Jurídica do Uso da Água</h2>
+<p>
+Garantia de uso legal da água, reduzindo riscos de autuações e embargos.
+</p>
+</div>
+
+</div>
+
+<div class="voltar">
+<a href="regularizacao.html">← Voltar para Regularização</a>
+</div>
+
+</div>
+
+<div class="footer">
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
 </div>
 
 </body>
