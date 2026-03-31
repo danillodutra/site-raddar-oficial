@@ -70,7 +70,7 @@ h1 {
     gap: 25px;
 }
 
-/* CARD CONTATO */
+/* CARD */
 .card {
     background: #ffffff;
     border-radius: 15px;
@@ -83,7 +83,6 @@ h1 {
     margin-top: 15px;
 }
 
-/* LINK TELEFONE */
 .card a {
     color: #1c2b36;
     text-decoration: none;
@@ -93,21 +92,22 @@ h1 {
     color: #c8a96a;
 }
 
-/* LOGO LADO DIREITO */
-.logo-box {
-    background: #ffffff;
+/* MAPA + LOGO */
+.mapa-box {
+    position: relative;
     border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 300px;
-    padding: 20px;
+    overflow: hidden;
+    height: 300px;
 }
 
-.logo-box img {
-    width: 100%;
-    max-width: 300px;
-    object-fit: contain;
+/* LOGO DENTRO DO MAPA */
+.logo-mapa {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 140px;
+    z-index: 2;
+    opacity: 0.95;
 }
 
 /* FOOTER */
@@ -187,10 +187,15 @@ Ver no Google Maps
 
 </div>
 
-<!-- DIREITA (LOGO NO ESPAÇO VAZIO) -->
-<div class="logo-box">
+<!-- DIREITA (MAPA + LOGO DENTRO) -->
+<div class="mapa-box">
 
-<img src="logo.png" alt="Raddar Agronegócios">
+<img src="logo.png" class="logo-mapa">
+
+<iframe 
+src="https://www.google.com/maps?q=Edifício+Aquarius+Center+Goiânia&output=embed"
+width="100%" height="100%" style="border:0;" allowfullscreen="">
+</iframe>
 
 </div>
 
