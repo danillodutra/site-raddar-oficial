@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regularização Ambiental - Raddar</title>
+<title>Regularização de Imóveis Rurais - Raddar</title>
 
 <style>
 body {
@@ -16,39 +16,72 @@ body {
     padding: 30px;
 }
 
+/* TITULO */
 h1 {
     text-align: center;
     color: #1c2b36;
     margin-bottom: 30px;
 }
 
-.imagem-topo {
-    width: 100%;
-    height: 250px;
-    background: url('regularizacao-ambiental.png') center/cover no-repeat;
-    border-radius: 12px;
+/* BOTÕES DAS ABAS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
 }
 
+.tab-btn {
+    padding: 12px 20px;
+    border: none;
+    background: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    color: #1c2b36;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.tab-btn.active {
+    background: #c62828;
+    color: white;
+}
+
+/* CONTEÚDO */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* IMAGEM */
+.imagem-topo {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* BOX */
 .box {
     background: #ffffff;
     padding: 25px;
     border-left: 5px solid #c8a96a;
     border-radius: 10px;
-    margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-ul {
-    padding-left: 20px;
-}
-
-.voltar {
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #1c2b36;
+/* MOBILE */
+@media(max-width:768px){
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 </style>
 </head>
@@ -57,27 +90,81 @@ ul {
 
 <div class="container">
 
-<h1>Regularização Ambiental</h1>
+<h1>Regularização de Imóveis Rurais</h1>
 
-<div class="imagem-topo"></div>
-
-<div class="box">
-<p>
-Atuação técnica especializada na adequação ambiental de imóveis rurais, garantindo conformidade com a legislação vigente e segurança jurídica ao produtor.
-</p>
-
-<ul>
-<li>Cadastro Ambiental Rural (CAR)</li>
-<li>Regularização de Áreas de Preservação Permanente (APP)</li>
-<li>Regularização de Reserva Legal</li>
-<li>Projetos de recomposição florestal</li>
-<li>Adequação ambiental para financiamentos e certificações</li>
-</ul>
+<!-- BOTÕES -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab('ambiental')">Regularização Ambiental</button>
+    <button class="tab-btn" onclick="openTab('agua')">Outorga d’água</button>
+    <button class="tab-btn" onclick="openTab('fundiaria')">Regularização Fundiária</button>
 </div>
 
-<a href="regularizacao.html" class="voltar">← Voltar</a>
+<!-- AMBIENTAL -->
+<div id="ambiental" class="tab-content active">
+    <div class="imagem-topo" style="background-image:url('regularizacao-ambiental.png')"></div>
+
+    <div class="box">
+        <p>
+        Atuação técnica especializada na adequação ambiental de imóveis rurais, garantindo conformidade com a legislação vigente e segurança jurídica ao produtor.
+        </p>
+
+        <ul>
+            <li>Cadastro Ambiental Rural (CAR)</li>
+            <li>Regularização de APP</li>
+            <li>Reserva Legal</li>
+            <li>Recomposição florestal</li>
+            <li>Adequação para financiamentos</li>
+        </ul>
+    </div>
+</div>
+
+<!-- OUTORGA -->
+<div id="agua" class="tab-content">
+    <div class="imagem-topo" style="background-image:url('outorga-agua.png')"></div>
+
+    <div class="box">
+        <p>
+        Assessoria técnica para regularização do uso de recursos hídricos, garantindo segurança jurídica e conformidade com órgãos ambientais.
+        </p>
+
+        <ul>
+            <li>Solicitação de outorga</li>
+            <li>Regularização de captação</li>
+            <li>Projetos de irrigação</li>
+            <li>Acompanhamento de processos</li>
+        </ul>
+    </div>
+</div>
+
+<!-- FUNDIARIA -->
+<div id="fundiaria" class="tab-content">
+    <div class="imagem-topo" style="background-image:url('regularizacao-fundiaria.png')"></div>
+
+    <div class="box">
+        <p>
+        Atuação técnica na regularização dominial de imóveis rurais, com suporte técnico para processos judiciais e extrajudiciais.
+        </p>
+
+        <ul>
+            <li>Desmembramento</li>
+            <li>Usucapião rural</li>
+            <li>Retificação de área</li>
+            <li>Desapropriação</li>
+        </ul>
+    </div>
+</div>
 
 </div>
+
+<script>
+function openTab(tab) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+    document.getElementById(tab).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
 
 </body>
 </html>
