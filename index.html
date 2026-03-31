@@ -30,10 +30,13 @@ header {
 /* LOGO */
 .logo img {
     height: 65px;
-    object-fit: contain;
 }
 
 /* MENU */
+nav {
+    display: flex;
+}
+
 nav a {
     text-decoration: none;
     color: #1c2b36;
@@ -66,7 +69,6 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* LINHA */
 .linha {
     width: 90px;
     height: 2px;
@@ -74,7 +76,6 @@ nav a:hover {
     margin: 18px auto;
 }
 
-/* TEXTO APOIO */
 .hero-content p {
     margin-top: 10px;
     color: #555;
@@ -89,17 +90,31 @@ nav a:hover {
     background: #ffffff;
 }
 
-/* RESPONSIVO */
+/* 📱 MOBILE */
 @media(max-width:768px){
+
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
     .hero-content h1,
     .hero-content h2 {
         font-size: 2rem;
     }
 
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
 </style>
 
@@ -110,7 +125,7 @@ nav a:hover {
 <header>
 
 <div class="logo">
-    <img src="logo.png" alt="Raddar Agronegócios">
+    <img src="logo.png" alt="Raddar">
 </div>
 
 <nav>
