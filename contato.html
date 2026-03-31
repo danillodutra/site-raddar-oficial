@@ -1,180 +1,206 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato | Raddar Agronegócios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato | Raddar Agronegócios</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #1c2b36;
+}
 
-    body {
-      background: #f4f4f4;
-      color: #222;
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #ffffff;
+    border-bottom: 2px solid #c8a96a;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* MENU */
+nav a {
+    text-decoration: none;
+    color: #1c2b36;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c8a96a;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* CARD CONTATO */
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card strong {
+    display: block;
+    margin-top: 15px;
+}
+
+/* LINK TELEFONE */
+.card a {
+    color: #1c2b36;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #c8a96a;
+}
+
+/* LOGO LADO DIREITO */
+.logo-box {
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.logo-box img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: #777;
+    background: #ffffff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .grid {
+        grid-template-columns: 1fr;
     }
 
     header {
-      background: #fff;
-      border-bottom: 2px solid #c9a646;
-    }
-
-    .topo {
-      max-width: 1200px;
-      margin: auto;
-      padding: 14px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        padding: 10px 20px;
     }
 
     .logo img {
-      height: 34px;
+        height: 50px;
     }
+}
+</style>
 
-    nav {
-      display: flex;
-      gap: 24px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #222;
-      font-size: 15px;
-    }
-
-    nav a.ativo {
-      color: #c9a646;
-      font-weight: 600;
-    }
-
-    .pagina {
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 32px;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #666;
-    }
-
-    .contato-box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
-
-    .info {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      border-top: 3px solid #c9a646;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    .info p {
-      margin-bottom: 14px;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      min-height: 320px;
-      border: none;
-      border-radius: 10px;
-    }
-
-    footer {
-      background: #fff;
-      text-align: center;
-      padding: 18px;
-      font-size: 13px;
-      color: #777;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .contato-box {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="topo">
-    <div class="logo">
-      <img src="logo.png">
-    </div>
 
-    <nav>
-      <a href="index.html">Início</a>
-      <a href="servicos.html">Serviços</a>
-      <a class="ativo" href="contato.html">Contato</a>
-    </nav>
-  </div>
+<div class="logo">
+    <img src="logo.png" alt="Raddar">
+</div>
+
+<nav>
+    <a href="index.html">Início</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+</nav>
+
 </header>
 
-<div class="pagina">
+<div class="container">
 
-  <h1>Contato</h1>
+<h1>Contato</h1>
 
-  <p class="intro">
-    Entre em contato para informações sobre perícias, consultoria e serviços técnicos especializados.
-  </p>
+<p class="subtitulo">
+Entre em contato para informações sobre perícias e consultoria.
+</p>
 
-  <div class="contato-box">
+<div class="grid">
 
-    <!-- DADOS -->
-    <div class="info">
-      <p><strong>Telefone:</strong> (62) 99930-5405</p>
+<!-- ESQUERDA -->
+<div class="card">
 
-      <p><strong>Endereço:</strong><br>
-      Edifício Aquarius Center Empresarial<br>
-      Rua T-36, Setor Bueno<br>
-      Goiânia - GO<br>
-      Sala 1106
-      </p>
+<strong>Telefone:</strong>
+<p>
+<a href="https://wa.me/5562999305405" target="_blank">
+(62) 99930-5405
+</a>
+</p>
 
-      <p>
-        <a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KcdOAvbf8F6TMWRXKl_KYhet&daddr=Edificio+Aquarius+Center+Empresarial+-+R.+T-36+-+St.+Bueno,+Goi%C3%A2nia+-+GO,+74230-105" target="_blank">
-        Ver no Google Maps
-        </a>
-      </p>
-    </div>
+<strong>Endereço:</strong>
+<p>
+Edifício Aquarius Center<br>
+Rua T-36, Setor Bueno<br>
+Goiânia - GO<br>
+Sala 1106
+</p>
 
-    <!-- MAPA -->
-    <div>
-      <iframe 
-        src="https://www.google.com/maps?q=Edificio+Aquarius+Center+Empresarial+Goi%C3%A2nia&output=embed">
-      </iframe>
-    </div>
-
-  </div>
+<a href="https://www.google.com/maps?q=Edifício+Aquarius+Center+Goiânia" target="_blank">
+Ver no Google Maps
+</a>
 
 </div>
 
-<footer>
-  Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
-</footer>
+<!-- DIREITA (LOGO NO ESPAÇO VAZIO) -->
+<div class="logo-box">
+
+<img src="logo.png" alt="Raddar Agronegócios">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</div>
 
 </body>
 </html>
