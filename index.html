@@ -25,22 +25,29 @@ header {
     background: #ffffff;
 }
 
-header a {
+/* LOGO */
+.logo img {
+    height: 40px;
+}
+
+/* MENU */
+nav a {
     text-decoration: none;
     color: #1c2b36;
     margin-left: 25px;
+    font-weight: 500;
 }
 
 /* HERO */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.85)),
-                url('pagina-inicial.png') center/cover no-repeat;
+    background: 
+        linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.75)),
+        url("pagina-inicial.png") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: relative;
 }
 
 /* TEXTO */
@@ -52,54 +59,43 @@ header a {
 
 .hero-content h2 {
     font-size: 2.2rem;
-    margin-top: 15px;
-    color: #1c2b36;
+    margin-top: 10px;
 }
 
 .hero-content p {
-    margin-top: 15px;
+    margin-top: 10px;
     color: #555;
 }
 
-/* LINHA DOURADA ANIMADA */
+/* LINHA ANIMADA */
 .linha {
     width: 120px;
     height: 3px;
     margin: 20px auto;
-    background: linear-gradient(90deg, transparent, #c8a96a, transparent);
+    background: #c8a96a;
     position: relative;
     overflow: hidden;
 }
 
-.linha::before {
+.linha::after {
     content: "";
     position: absolute;
     width: 40px;
     height: 100%;
-    background: #c8a96a;
+    background: white;
     left: -40px;
-    animation: mover 2s infinite;
+    animation: animar 2s infinite;
 }
 
-@keyframes mover {
+@keyframes animar {
     0% { left: -40px; }
     100% { left: 120px; }
 }
 
-/* LINHAS MODERNAS DE FUNDO */
-.hero::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(200,169,106,0.08), transparent 70%);
-    pointer-events: none;
-}
-
 /* RESPONSIVO */
 @media(max-width:768px){
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-content h2 { font-size: 1.6rem; }
+    .hero-content h1 { font-size: 2rem; }
+    .hero-content h2 { font-size: 1.5rem; }
 }
 </style>
 
@@ -108,15 +104,19 @@ header a {
 <body>
 
 <header>
-    <div>
-        <strong>Raddar</strong>
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="logo.png" alt="Raddar">
     </div>
 
+    <!-- MENU -->
     <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
         <a href="#">Contato</a>
     </nav>
+
 </header>
 
 <section class="hero">
