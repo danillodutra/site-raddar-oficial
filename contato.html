@@ -1,28 +1,180 @@
-<div class="card contato-card">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato | Raddar Agronegócios</title>
 
-    <div class="texto-contato">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        <strong>Telefone:</strong>
-        <p>
-        <a href="https://wa.me/5562999305405" target="_blank">
-        (62) 99930-5405
-        </a>
-        </p>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-        <strong>Endereço:</strong>
-        <p>
-        Edifício Aquarius Center<br>
-        Rua T-36, Setor Bueno<br>
-        Goiânia - GO<br>
-        Sala 1106
-        </p>
+    body {
+      background: #f4f4f4;
+      color: #222;
+    }
 
-        <a href="https://www.google.com/maps?q=Edifício+Aquarius+Center+Goiânia" target="_blank">
-        Ver no Google Maps
-        </a>
+    header {
+      background: #fff;
+      border-bottom: 2px solid #c9a646;
+    }
 
+    .topo {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 34px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-size: 15px;
+    }
+
+    nav a.ativo {
+      color: #c9a646;
+      font-weight: 600;
+    }
+
+    .pagina {
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .contato-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .info {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      border-top: 3px solid #c9a646;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .info p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 13px;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .contato-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topo">
+    <div class="logo">
+      <img src="logo.png">
     </div>
 
-    <img src="logo.png" class="logo-contato-lado">
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="servicos.html">Serviços</a>
+      <a class="ativo" href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<div class="pagina">
+
+  <h1>Contato</h1>
+
+  <p class="intro">
+    Entre em contato para informações sobre perícias, consultoria e serviços técnicos especializados.
+  </p>
+
+  <div class="contato-box">
+
+    <!-- DADOS -->
+    <div class="info">
+      <p><strong>Telefone:</strong> (62) 99930-5405</p>
+
+      <p><strong>Endereço:</strong><br>
+      Edifício Aquarius Center Empresarial<br>
+      Rua T-36, Setor Bueno<br>
+      Goiânia - GO<br>
+      Sala 1106
+      </p>
+
+      <p>
+        <a href="https://www.google.com/maps?um=1&ie=UTF-8&fb=1&gl=br&sa=X&geocode=KcdOAvbf8F6TMWRXKl_KYhet&daddr=Edificio+Aquarius+Center+Empresarial+-+R.+T-36+-+St.+Bueno,+Goi%C3%A2nia+-+GO,+74230-105" target="_blank">
+        Ver no Google Maps
+        </a>
+      </p>
+    </div>
+
+    <!-- MAPA -->
+    <div>
+      <iframe 
+        src="https://www.google.com/maps?q=Edificio+Aquarius+Center+Empresarial+Goi%C3%A2nia&output=embed">
+      </iframe>
+    </div>
+
+  </div>
 
 </div>
+
+<footer>
+  Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
+
+</body>
+</html>
