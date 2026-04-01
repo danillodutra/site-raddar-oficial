@@ -3,176 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Raddar Agronegócios</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
 }
 
-body{
-    background:#f5f5f5;
+/* NAVBAR */
+header {
+    background: #111;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* HEADER */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    background:#fff;
-    position:fixed;
-    width:100%;
-    z-index:1000;
+header img {
+    height: 40px;
 }
 
-/* MENU */
-.menu a{
-    margin:10px;
-    text-decoration:none;
-    color:#333;
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
 }
 
-/* INSTAGRAM */
-.social img{
-    width:24px;
-    margin-left:10px;
-    transition:0.3s;
-}
-
-.social img:hover{
-    transform:scale(1.2);
+nav a:hover {
+    color: #c8a96a;
 }
 
 /* HERO */
-.hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('pagina-inicial.png') center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    text-align:center;
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                url('pagina-inicial.png') no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
-/* SEÇÕES */
-.section{
-    padding:100px 20px;
-    text-align:center;
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    padding: 12px 25px;
+    margin: 10px;
+    background: #c8a96a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-buttons a:hover {
+    background: #fff;
+}
+
+/* SECTIONS */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #c8a96a;
 }
 
 /* CARDS */
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.card{
-    width:280px;
-    margin:15px;
-    padding:30px;
-    background:#fff;
-    border-radius:15px;
-    text-decoration:none;
-    color:#000;
-    transition:0.3s;
+.card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* IMAGENS */
-.icon{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:15px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
+/* FOOTER */
+footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 <header>
-    <img src="logo.png" height="40">
-
-    <nav class="menu">
+    <img src="logo.png" alt="Raddar">
+    <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
         <a href="contato.html">Contato</a>
     </nav>
-
-    <!-- INSTAGRAM -->
-    <div class="social">
-        <a href="https://www.instagram.com/raddar_agronegocios/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-        </a>
-    </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <div>
-        <h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
-        <p>Laudos técnicos e avaliação de imóveis rurais</p>
+<div>
+    <h1>Problemas com Safra, Seguro ou Dívida Rural?</h1>
+
+    <p>
+    Atuamos com laudos técnicos para comprovação de perdas,
+    análise de crédito rural e suporte em processos judiciais.
+    </p>
+
+    <p style="margin-top:15px; font-size:14px; color:#ccc;">
+    Base técnica: NBR 14.653 • MCR • Geoprocessamento
+    </p>
+
+    <div class="hero-buttons">
+        <a href="contato.html">Solicitar Análise</a>
+        <a href="contato.html">Falar com Especialista</a>
     </div>
+</div>
+</section>
+
+<!-- POSICIONAMENTO -->
+<section>
+    <h2>Quando o problema já existe, a solução precisa ser técnica</h2>
+
+    <p>
+    A Raddar Agronegócios atua na elaboração de laudos técnicos
+    para processos judiciais, crédito rural e regularização de imóveis rurais.
+    </p>
 </section>
 
 <!-- SERVIÇOS -->
-<section class="section">
-    <h2>Serviços</h2>
+<section>
+    <h2>Soluções Técnicas</h2>
 
     <div class="cards">
 
-        <a href="pericia.html" class="card">
-            <img src="pericia-avaliacao.png" class="icon">
+        <div class="card">
             <h3>Perícia Rural</h3>
-            <p>Laudos técnicos para processos judiciais.</p>
-        </a>
+            <p>Produção de prova técnica para processos judiciais</p>
+        </div>
 
-        <a href="consultoria.html" class="card">
-            <img src="consultoria.jpg.png" class="icon">
-            <h3>Consultoria Agrícola</h3>
-            <p>Diagnóstico técnico e tomada de decisão.</p>
-        </a>
+        <div class="card">
+            <h3>Crédito Rural</h3>
+            <p>Análise para prorrogação e revisão de dívidas</p>
+        </div>
 
-        <a href="geoprocessamento.html" class="card">
-            <img src="geoprocessamento.jpg.png" class="icon">
+        <div class="card">
             <h3>Geoprocessamento</h3>
-            <p>Análise com imagens de satélite.</p>
-        </a>
+            <p>Imagens de satélite e análise técnica avançada</p>
+        </div>
 
-        <a href="regularizacao.html" class="card">
-            <img src="regularizacao-fundiaria.png" class="icon">
+        <div class="card">
             <h3>Regularização</h3>
-            <p>Soluções ambientais e fundiárias.</p>
-        </a>
+            <p>Ambiental, fundiária e outorga d’água</p>
+        </div>
 
     </div>
 </section>
 
-<!-- WHATSAPP -->
-<div class="whatsapp">
-    <a href="https://wa.me/5562999305405">
-        <img src="botao.png" width="60">
+<!-- DIFERENCIAL -->
+<section>
+    <h2>Diferencial Técnico</h2>
+
+    <p>
+    Integração entre agronomia, geotecnologia e interpretação jurídica,
+    garantindo análises completas e confiáveis.
+    </p>
+</section>
+
+<!-- FRASE IMPACTO -->
+<section>
+    <h2>
+    Enquanto muitos focam na produção,
+    nós atuamos quando o problema impacta seu patrimônio.
+    </h2>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+    <h2>Precisa de uma análise técnica?</h2>
+
+    <a href="contato.html" style="background:#c8a96a; padding:15px 30px; color:#000; text-decoration:none; border-radius:5px;">
+    Falar no WhatsApp
     </a>
-</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+</footer>
 
 </body>
 </html>
