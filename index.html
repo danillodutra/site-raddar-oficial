@@ -10,38 +10,47 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #0d0d0d;
+    background: #000;
     color: #fff;
 }
 
 /* NAVBAR */
 header {
-    background: #111;
-    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
 }
 
 header img {
-    height: 40px;
+    height: 35px;
 }
 
 nav a {
     color: #fff;
-    margin: 0 15px;
+    margin-left: 25px;
     text-decoration: none;
+    font-weight: 500;
 }
 
 nav a:hover {
     color: #c8a96a;
 }
 
-/* HERO */
+/* HERO COM IMAGEM */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-                url('pagina-inicial.png') no-repeat center/cover;
+    background: 
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('pagina-inicial.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,75 +58,100 @@ nav a:hover {
     padding: 20px;
 }
 
+.hero-content {
+    max-width: 900px;
+}
+
 .hero h1 {
-    font-size: 42px;
+    font-size: 52px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: auto;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-.hero-buttons {
+.hero small {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.buttons {
     margin-top: 30px;
 }
 
-.hero-buttons a {
-    padding: 12px 25px;
+.buttons a {
+    display: inline-block;
+    padding: 15px 30px;
     margin: 10px;
     background: #c8a96a;
     color: #000;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
-    border-radius: 5px;
 }
 
-.hero-buttons a:hover {
+.buttons a:hover {
     background: #fff;
 }
 
-/* SECTIONS */
+/* SEÇÕES */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px;
     color: #c8a96a;
+    margin-bottom: 20px;
 }
 
 /* CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-top: 40px;
 }
 
 .card {
-    background: #1a1a1a;
-    padding: 20px;
+    background: #111;
+    padding: 25px;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #1c1c1c;
+}
+
+/* FRASE IMPACTO */
+.frase {
+    font-size: 22px;
+    color: #c8a96a;
+    max-width: 900px;
+    margin: auto;
 }
 
 /* FOOTER */
 footer {
-    background: #111;
+    background: #000;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
+    color: #888;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <header>
-    <img src="logo.png" alt="Raddar">
+    <img src="logo.png">
     <nav>
-        <a href="index.html">Início</a>
+        <a href="#">Início</a>
         <a href="servicos.html">Serviços</a>
         <a href="contato.html">Contato</a>
     </nav>
@@ -125,32 +159,31 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-<div>
-    <h1>Problemas com Safra, Seguro ou Dívida Rural?</h1>
+    <div class="hero-content">
 
-    <p>
-    Atuamos com laudos técnicos para comprovação de perdas,
-    análise de crédito rural e suporte em processos judiciais.
-    </p>
+        <h1>Problemas com Safra, Seguro ou Dívida Rural?</h1>
 
-    <p style="margin-top:15px; font-size:14px; color:#ccc;">
-    Base técnica: NBR 14.653 • MCR • Geoprocessamento
-    </p>
+        <p>
+        Atuamos com laudos técnicos para comprovação de perdas,
+        análise de crédito rural e suporte em processos judiciais.
+        </p>
 
-    <div class="hero-buttons">
-        <a href="contato.html">Solicitar Análise</a>
-        <a href="contato.html">Falar com Especialista</a>
+        <small>Base técnica: NBR 14.653 • MCR • Geoprocessamento</small>
+
+        <div class="buttons">
+            <a href="contato.html">Solicitar Análise Técnica</a>
+            <a href="contato.html">Falar com Especialista</a>
+        </div>
+
     </div>
-</div>
 </section>
 
 <!-- POSICIONAMENTO -->
 <section>
     <h2>Quando o problema já existe, a solução precisa ser técnica</h2>
-
     <p>
-    A Raddar Agronegócios atua na elaboração de laudos técnicos
-    para processos judiciais, crédito rural e regularização de imóveis rurais.
+    A Raddar Agronegócios atua na elaboração de laudos técnicos para processos judiciais,
+    crédito rural e regularização de imóveis rurais.
     </p>
 </section>
 
@@ -186,33 +219,29 @@ footer {
 <!-- DIFERENCIAL -->
 <section>
     <h2>Diferencial Técnico</h2>
-
     <p>
     Integração entre agronomia, geotecnologia e interpretação jurídica,
     garantindo análises completas e confiáveis.
     </p>
 </section>
 
-<!-- FRASE IMPACTO -->
+<!-- FRASE -->
 <section>
-    <h2>
-    Enquanto muitos focam na produção,
-    nós atuamos quando o problema impacta seu patrimônio.
-    </h2>
+    <p class="frase">
+    Enquanto muitos focam na produção, nós atuamos quando o problema impacta seu patrimônio.
+    </p>
 </section>
 
 <!-- CTA FINAL -->
 <section>
     <h2>Precisa de uma análise técnica?</h2>
-
-    <a href="contato.html" style="background:#c8a96a; padding:15px 30px; color:#000; text-decoration:none; border-radius:5px;">
-    Falar no WhatsApp
-    </a>
+    <div class="buttons">
+        <a href="contato.html">Solicitar Análise no WhatsApp</a>
+    </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
+Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
 </footer>
 
 </body>
