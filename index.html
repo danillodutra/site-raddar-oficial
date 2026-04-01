@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raddar Agronegócios</title>
 
+<title>Raddar Agronegócios | Perícia Rural e Consultoria Técnica</title>
+
+<meta name="description" content="Perícia rural, laudos técnicos e avaliação de imóveis rurais conforme NBR 14.653. Atuação em processos judiciais, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.">
+
+<meta name="keywords" content="perícia rural, laudo técnico rural, avaliação de imóveis rurais, engenheiro agrônomo, crédito rural, geoprocessamento, regularização ambiental">
+
+<meta name="author" content="Raddar Agronegócios">
+
+<!-- FAVICON -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -24,18 +40,23 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px;
+    padding:20px 40px;
     background:#fff;
     position:fixed;
     width:100%;
     z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* MENU */
 .menu a{
     margin:10px;
     text-decoration:none;
     color:#333;
+    font-weight:500;
+}
+
+.menu a:hover{
+    color:#c00000;
 }
 
 /* INSTAGRAM */
@@ -58,12 +79,28 @@ header{
     justify-content:center;
     color:#fff;
     text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.9;
 }
 
 /* SEÇÕES */
 .section{
     padding:100px 20px;
     text-align:center;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:40px;
 }
 
 /* CARDS */
@@ -82,6 +119,7 @@ header{
     text-decoration:none;
     color:#000;
     transition:0.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
 }
 
 .card:hover{
@@ -103,6 +141,25 @@ header{
     bottom:20px;
     right:20px;
 }
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+}
+
 </style>
 </head>
 
@@ -118,7 +175,6 @@ header{
         <a href="contato.html">Contato</a>
     </nav>
 
-    <!-- INSTAGRAM -->
     <div class="social">
         <a href="https://www.instagram.com/raddar_agronegocios/" target="_blank">
             <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
@@ -129,8 +185,8 @@ header{
 <!-- HERO -->
 <section class="hero">
     <div>
-        <h1>PERÍCIA AGRONÔMICA E CONSULTORIA TÉCNICA</h1>
-        <p>Laudos técnicos e avaliação de imóveis rurais</p>
+        <h1>Perícia Rural e Inteligência Técnica para o Agro</h1>
+        <p>Laudos técnicos, avaliação de imóveis rurais e atuação em processos judiciais</p>
     </div>
 </section>
 
@@ -147,13 +203,13 @@ header{
         </a>
 
         <a href="consultoria.html" class="card">
-            <img src="consultoria.jpg.png" class="icon">
+            <img src="consultoria.png" class="icon">
             <h3>Consultoria Agrícola</h3>
             <p>Diagnóstico técnico e tomada de decisão.</p>
         </a>
 
         <a href="geoprocessamento.html" class="card">
-            <img src="geoprocessamento.jpg.png" class="icon">
+            <img src="geoprocessamento.png" class="icon">
             <h3>Geoprocessamento</h3>
             <p>Análise com imagens de satélite.</p>
         </a>
