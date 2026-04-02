@@ -1,358 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Raddar Agronegócios | Perícia Rural, Laudos Técnicos e Consultoria Agrícola</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Perícia rural, laudos técnicos e avaliação de imóveis rurais conforme NBR 14.653. Atuação em processos judiciais, crédito rural, geoprocessamento e regularização ambiental em todo o Brasil.">
+<title>Raddar Agronegócios | Perícia Rural e Consultoria Técnica</title>
 
-    <meta name="keywords" content="perícia rural, laudo técnico rural, avaliação de imóveis rurais, engenheiro agrônomo, crédito rural, geoprocessamento, regularização ambiental">
+<meta name="description" content="Perícia rural, laudos técnicos e avaliação de imóveis rurais conforme NBR 14.653. Atuação em processos judiciais, crédito rural, geoprocessamento e regularização ambiental.">
 
-    <meta name="author" content="Raddar Agronegócios">
+<!-- FAVICON -->
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-    <!-- FAVICON -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- FONTE -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
-        }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-        body{
-            background:#f5f5f5;
-            color:#222;
-        }
+body{background:#f5f5f5;}
 
-        img{
-            max-width:100%;
-            display:block;
-        }
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#fff;
+position:fixed;
+width:100%;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        /* HEADER */
-        header{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:18px 40px;
-            background:#fff;
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            z-index:1000;
-            box-shadow:0 2px 12px rgba(0,0,0,0.06);
-        }
+.menu a{
+margin:10px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
 
-        .logo img{
-            height:40px;
-            width:auto;
-        }
+.menu a:hover{color:#c00000;}
 
-        .menu{
-            display:flex;
-            align-items:center;
-            gap:32px;
-        }
+.social img{
+width:24px;
+transition:0.3s;
+}
 
-        .menu a{
-            text-decoration:none;
-            color:#333;
-            font-weight:500;
-            transition:0.3s;
-        }
+.social img:hover{transform:scale(1.2);}
 
-        .menu a:hover{
-            color:#c00000;
-        }
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('pagina-inicial.png') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#fff;
+text-align:center;
+}
 
-        .social a{
-            display:flex;
-            align-items:center;
-            justify-content:center;
-        }
+.hero h1{font-size:40px;margin-bottom:15px;}
+.hero p{font-size:18px;}
 
-        .social img{
-            width:24px;
-            height:24px;
-            transition:0.3s;
-        }
+/* SEÇÃO */
+.section{
+padding:100px 20px;
+text-align:center;
+}
 
-        .social img:hover{
-            transform:scale(1.12);
-        }
+/* SERVIÇOS */
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
 
-        /* HERO */
-        .hero{
-            min-height:100vh;
-            background:
-                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                url('pagina-inicial.png') center/cover no-repeat;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-align:center;
-            color:#fff;
-            padding:140px 20px 80px;
-        }
+.card{
+width:280px;
+margin:15px;
+padding:30px;
+background:#fff;
+border-radius:15px;
+text-decoration:none;
+color:#000;
+transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
 
-        .hero-content{
-            max-width:900px;
-        }
+.card:hover{transform:translateY(-10px);}
 
-        .hero h1{
-            font-size:46px;
-            line-height:1.15;
-            margin-bottom:18px;
-            font-weight:700;
-        }
+.icon{
+width:120px;
+height:120px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
 
-        .hero p{
-            font-size:18px;
-            line-height:1.6;
-            opacity:0.95;
-            max-width:760px;
-            margin:0 auto;
-        }
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+}
 
-        /* SEÇÕES */
-        .section{
-            padding:90px 20px;
-            text-align:center;
-        }
-
-        .section h2{
-            font-size:42px;
-            margin-bottom:20px;
-            color:#111;
-        }
-
-        .section p{
-            max-width:900px;
-            margin:0 auto;
-            line-height:1.8;
-            font-size:17px;
-            color:#444;
-        }
-
-        /* SERVIÇOS */
-        .services{
-            background:#efefef;
-            padding:80px 20px 100px;
-        }
-
-        .services h2{
-            text-align:center;
-            font-size:36px;
-            margin-bottom:50px;
-            color:#111;
-        }
-
-        .cards{
-            max-width:1300px;
-            margin:0 auto;
-            display:flex;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:28px;
-        }
-
-        .card{
-            width:290px;
-            background:#fff;
-            border-radius:22px;
-            padding:30px 26px;
-            text-decoration:none;
-            color:#111;
-            box-shadow:0 8px 24px rgba(0,0,0,0.05);
-            transition:transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover{
-            transform:translateY(-8px);
-            box-shadow:0 14px 30px rgba(0,0,0,0.08);
-        }
-
-        .icon{
-            width:120px;
-            height:120px;
-            object-fit:cover;
-            border-radius:16px;
-            margin:0 auto 22px;
-            background:#f4f4f4;
-        }
-
-        .card h3{
-            font-size:20px;
-            margin-bottom:10px;
-            font-weight:700;
-        }
-
-        .card p{
-            font-size:16px;
-            line-height:1.6;
-            color:#333;
-        }
-
-        /* WHATSAPP */
-        .whatsapp{
-            position:fixed;
-            bottom:20px;
-            right:20px;
-            z-index:999;
-        }
-
-        .whatsapp img{
-            width:62px;
-            height:62px;
-            transition:0.3s;
-        }
-
-        .whatsapp img:hover{
-            transform:scale(1.08);
-        }
-
-        /* RESPONSIVO */
-        @media(max-width:900px){
-            header{
-                padding:16px 20px;
-            }
-
-            .menu{
-                gap:18px;
-            }
-
-            .hero h1{
-                font-size:34px;
-            }
-
-            .hero p{
-                font-size:16px;
-            }
-        }
-
-        @media(max-width:768px){
-            header{
-                flex-direction:column;
-                gap:12px;
-            }
-
-            .menu{
-                gap:16px;
-                flex-wrap:wrap;
-                justify-content:center;
-            }
-
-            .hero{
-                padding-top:170px;
-            }
-
-            .hero h1{
-                font-size:28px;
-            }
-
-            .hero p{
-                font-size:15px;
-            }
-
-            .section h2,
-            .services h2{
-                font-size:30px;
-            }
-
-            .card{
-                width:100%;
-                max-width:330px;
-            }
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="Raddar Agronegócios">
-        </a>
+<header>
+<img src="logo.png" height="40">
 
-        <nav class="menu">
-            <a href="index.html">Início</a>
-            <a href="servicos.html">Serviços</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+<nav class="menu">
+<a href="index.html">Início</a>
+<a href="servicos.html">Serviços</a>
+<a href="contato.html">Contato</a>
+</nav>
 
-        <div class="social">
-            <a href="https://www.instagram.com/raddar_agronegocios/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-            </a>
-        </div>
-    </header>
+<div class="social">
+<a href="https://www.instagram.com/raddar_agronegocios/" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+</a>
+</div>
+</header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Perícia Rural e Inteligência Técnica para o Agro</h1>
-            <p>Laudos técnicos, avaliação de imóveis rurais e atuação em processos judiciais.</p>
-        </div>
-    </section>
+<section class="hero">
+<div>
+<h1>Perícia Rural e Inteligência Técnica para o Agro</h1>
+<p>Laudos técnicos, avaliação de imóveis rurais e atuação em processos judiciais</p>
+</div>
+</section>
 
-    <!-- TEXTO SEO -->
-    <section class="section">
-        <h2>Perícia Rural</h2>
-        <p>
-            A Raddar Agronegócios atua com perícia rural, elaboração de laudos técnicos e avaliação de imóveis rurais conforme a NBR 14.653.
-            Atendemos demandas judiciais, crédito rural, geoprocessamento e regularização ambiental, com atuação técnica em todo o Brasil.
-        </p>
-    </section>
+<section class="section">
+<h2>Perícia Rural</h2>
+<p>Atuação em perícia agronômica, laudos técnicos e avaliação de imóveis rurais conforme a NBR 14.653.</p>
+</section>
 
-    <!-- SERVIÇOS -->
-    <section class="services">
-        <h2>Serviços</h2>
+<section class="section">
+<h2>Serviços</h2>
 
-        <div class="cards">
-            <a href="pericia.html" class="card">
-                <img src="pericia-avaliacao.png" class="icon" alt="Perícia Rural">
-                <h3>Perícia Rural</h3>
-                <p>Laudos técnicos para processos judiciais.</p>
-            </a>
+<div class="cards">
 
-            <a href="consultoria.html" class="card">
-                <img src="consultoria-agricola.png" class="icon" alt="Consultoria Agrícola">
-                <h3>Consultoria Agrícola</h3>
-                <p>Diagnóstico técnico e tomada de decisão.</p>
-            </a>
+<a href="pericia.html" class="card">
+<img src="pericia-avaliacao.png" class="icon">
+<h3>Perícia Rural</h3>
+<p>Laudos técnicos para processos judiciais.</p>
+</a>
 
-            <a href="geoprocessamento.html" class="card">
-                <img src="geoprocessamento.png" class="icon" alt="Geoprocessamento">
-                <h3>Geoprocessamento</h3>
-                <p>Análise com imagens de satélite.</p>
-            </a>
+<a href="consultoria.html" class="card">
+<img src="consultoria-agricola.png" class="icon">
+<h3>Consultoria Agrícola</h3>
+<p>Diagnóstico técnico e tomada de decisão.</p>
+</a>
 
-            <a href="regularizacao.html" class="card">
-                <img src="regularizacao-fundiaria.png" class="icon" alt="Regularização">
-                <h3>Regularização</h3>
-                <p>Soluções ambientais e fundiárias.</p>
-            </a>
-        </div>
-    </section>
+<a href="geoprocessamento.html" class="card">
+<img src="geoprocessamento.png" class="icon">
+<h3>Geoprocessamento</h3>
+<p>Análise com imagens de satélite.</p>
+</a>
 
-    <!-- WHATSAPP -->
-    <div class="whatsapp">
-        <a href="https://wa.me/5562999305405" target="_blank">
-            <img src="botao.png" alt="WhatsApp">
-        </a>
-    </div>
+<a href="regularizacao.html" class="card">
+<img src="regularizacao-fundiaria.png" class="icon">
+<h3>Regularização</h3>
+<p>Soluções ambientais e fundiárias.</p>
+</a>
+
+</div>
+</section>
+
+<div class="whatsapp">
+<a href="https://wa.me/5562999305405">
+<img src="botao.png" width="60">
+</a>
+</div>
 
 </body>
 </html>
