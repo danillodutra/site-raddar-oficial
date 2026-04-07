@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Análise NDVI | Raddar Agronegócios</title>
 
-<link rel="icon" href="favicon.ico">
+<title>Análise NDVI | Raddar Agronegócios</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -26,9 +26,9 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 40px;
+    padding:20px 60px;
     background:#fff;
-    border-bottom:2px solid #c9a64b;
+    border-bottom:2px solid #d4af37;
 }
 
 header img{
@@ -36,19 +36,20 @@ header img{
 }
 
 nav a{
-    margin-left:25px;
+    margin-left:30px;
     text-decoration:none;
     color:#333;
+    font-weight:500;
 }
 
 nav a:hover{
-    color:#c9a64b;
+    color:#d4af37;
 }
 
-/* HERO */
+/* TITULO */
 .hero{
     text-align:center;
-    padding:60px 20px;
+    padding:60px 20px 40px;
 }
 
 .hero h1{
@@ -65,11 +66,9 @@ nav a:hover{
 /* GRID */
 .grid{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
-    padding:40px;
-    max-width:1100px;
-    margin:auto;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+    padding:40px 60px;
 }
 
 /* CARD */
@@ -77,47 +76,70 @@ nav a:hover{
     background:#fff;
     border-radius:12px;
     overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
     text-align:center;
+    transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-5px);
 }
 
+/* IMAGEM */
 .card img{
     width:100%;
     height:220px;
     object-fit:cover;
 }
 
+/* TEXTO */
 .card h3{
-    padding:15px;
+    margin:15px 0 5px;
 }
 
 .card p{
+    padding:0 15px 20px;
     font-size:14px;
-    padding:0 15px 15px;
-    color:#555;
 }
 
-/* FOOTER */
-footer{
+/* LINK */
+.card a{
+    text-decoration:none;
+    color:#1a73e8;
+    font-weight:600;
+}
+
+/* BOTÃO VOLTAR */
+.voltar{
     text-align:center;
-    padding:30px;
-    background:#fff;
-    margin-top:40px;
+    margin:40px 0;
 }
-</style>
 
+.voltar a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    header{
+        padding:20px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
     <img src="logo.png">
-
     <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
@@ -125,51 +147,48 @@ footer{
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <h1>Análise Técnica por NDVI</h1>
-
     <p>
     O NDVI (Índice de Vegetação por Diferença Normalizada) permite avaliar o vigor das culturas agrícolas, identificando áreas com estresse hídrico, falhas de desenvolvimento e possíveis perdas produtivas.
     </p>
 </section>
 
-<!-- GRID DE IMAGENS -->
 <section class="grid">
 
-    <!-- NDVI ESTUDO -->
-    <a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank" class="card">
+    <!-- ESTUDO -->
+    <div class="card">
         <img src="frustacao-safra-ndvi-estudo.jpg">
-        <h3>NDVI (Estudo)</h3>
+        <h3><a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">NDVI (Estudo)</a></h3>
         <p>Base científica aplicada ao sensoriamento remoto</p>
-    </a>
+    </div>
 
     <!-- SOJA -->
-    <a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank" class="card">
+    <div class="card">
         <img src="frustacao-safra-ndvi-soja.jpg">
-        <h3>Soja</h3>
+        <h3><a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank">Soja</a></h3>
         <p>Análise espectral e comportamento vegetativo</p>
-    </a>
+    </div>
 
     <!-- ALGODÃO -->
-    <a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank" class="card">
+    <div class="card">
         <img src="frustacao-safra-ndvi-algodao.jpg">
-        <h3>Algodão</h3>
+        <h3><a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank">Algodão</a></h3>
         <p>Monitoramento agrícola por sensoriamento remoto</p>
-    </a>
+    </div>
 
-    <!-- MILHO -->
-    <a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank" class="card">
+    <!-- MILHO (AGORA ALINHADO CORRETAMENTE) -->
+    <div class="card">
         <img src="frustacao-safra-ndvi-milho.jpg">
-        <h3>Milho</h3>
+        <h3><a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank">Milho</a></h3>
         <p>Indicadores de produtividade e vigor vegetativo</p>
-    </a>
+    </div>
 
 </section>
 
-<footer>
-    Raddar Agronegócios
-</footer>
+<div class="voltar">
+    <a href="frustacao-safra.html">← Voltar para Frustração de Safra</a>
+</div>
 
 </body>
 </html>
