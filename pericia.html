@@ -1,134 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Perícia Rural | Raddar Agronegócios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perícia Rural | Raddar Agronegócios</title>
 
-<link rel="icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+        header {
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #caa24c;
+        }
 
-body{
-    background:#f5f5f5;
-}
+        header img {
+            height: 35px;
+        }
 
-/* HEADER */
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 40px;
-    background:#fff;
-    border-bottom:2px solid #c9a64b;
-}
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
 
-header img{
-    width:140px;
-}
+        nav a:hover {
+            color: #caa24c;
+        }
 
-nav a{
-    margin-left:25px;
-    text-decoration:none;
-    color:#333;
-    font-weight:500;
-}
+        .container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
 
-nav a:hover{
-    color:#c9a64b;
-}
+        h1 {
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
 
-/* HERO */
-.hero{
-    text-align:center;
-    padding:60px 20px;
-}
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
 
-.hero h1{
-    font-size:42px;
-    margin-bottom:20px;
-}
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            transition: 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
 
-.hero p{
-    font-size:18px;
-    max-width:700px;
-    margin:0 auto;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
 
-/* SECTION */
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-}
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
 
-.box{
-    background:#fff;
-    padding:30px;
-    border-radius:12px;
-    margin-bottom:25px;
-    border-top:4px solid #c9a64b;
-}
+        .card h2 {
+            padding: 20px;
+            font-size: 18px;
+        }
 
-/* CTA */
-.cta{
-    background:#fff;
-    padding:30px;
-    text-align:center;
-    border-radius:12px;
-    border-top:4px solid #c9a64b;
-}
+        footer {
+            text-align: center;
+            margin: 60px 0 30px;
+            font-size: 14px;
+            color: #777;
+        }
 
-ul{
-    margin-top:10px;
-    padding-left:20px;
-}
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
 
-li{
-    margin-bottom:8px;
-}
-
-/* BOTÃO FLUTUANTE */
-.botao-contato {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999;
-}
-
-.botao-contato img {
-    width: 65px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.botao-contato img:hover {
-    transform: scale(1.15);
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:30px;
-    background:#fff;
-    margin-top:40px;
-}
-</style>
-
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png">
+    <img src="logo.png" alt="Raddar Agronegócios">
+
     <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
@@ -136,106 +117,36 @@ footer{
     </nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
+<div class="container">
     <h1>Perícia Rural</h1>
 
-    <p>
-    Problemas com crédito rural, frustração de safra ou perda produtiva podem comprometer toda a atividade agrícola.
-    <br><br>
-    <strong>A solução está na prova técnica.</strong>
-    </p>
-</section>
+    <div class="grid">
 
-<div class="container">
+        <a href="servidao.html" class="card">
+            <img src="pericia-servidao.png" alt="Servidão Administrativa">
+            <h2>Servidão Administrativa</h2>
+        </a>
 
-    <!-- POSICIONAMENTO -->
-    <div class="box">
-        <p>
-        A Raddar Agronegócios atua com perícia técnica especializada, integrando agronomia, geotecnologia e análise econômica para construção de laudos robustos aplicados a processos judiciais, extrajudiciais e negociações com instituições financeiras.
-        </p>
+        <a href="avaliacao.html" class="card">
+            <img src="pericia-avaliacao.png" alt="Avaliação de Imóveis Rurais">
+            <h2>Avaliação de Imóveis Rurais</h2>
+        </a>
+
+        <a href="frustracao-safra.html" class="card">
+            <img src="pericia-lavoura.png" alt="Lavoura">
+            <h2>Lavoura</h2>
+        </a>
+
+        <a href="pecuaria.html" class="card">
+            <img src="pericia-pecuaria.png" alt="Pecuária">
+            <h2>Pecuária</h2>
+        </a>
+
     </div>
-
-    <!-- CHAMAMENTO -->
-    <div class="box">
-        <strong>Se você enfrenta:</strong>
-
-        <ul>
-            <li>Dificuldade para pagar financiamento rural</li>
-            <li>Frustração de safra</li>
-            <li>Redução de produtividade</li>
-            <li>Problemas com banco ou crédito rural</li>
-        </ul>
-
-        <p style="margin-top:10px;">
-        <strong>É possível reestruturar sua dívida com base técnica e respaldo legal.</strong>
-        </p>
-    </div>
-
-    <!-- FUNDAMENTAÇÃO LEGAL -->
-    <div class="box">
-        <h3>Fundamentação Legal</h3>
-
-        <p style="margin-top:10px;">
-        A atuação está fundamentada na legislação vigente, com destaque para:
-        </p>
-
-        <ul>
-            <li><strong>Lei nº 4.829/1965</strong> – Crédito Rural</li>
-            <li><strong>Lei nº 8.171/1991</strong> – Política Agrícola</li>
-            <li><strong>Manual de Crédito Rural (MCR)</strong> – especialmente item 2.6.4</li>
-        </ul>
-
-        <p style="margin-top:10px;">
-        Essas normas permitem comprovar tecnicamente a incapacidade temporária de pagamento e viabilizar a prorrogação das operações de crédito rural.
-        </p>
-    </div>
-
-    <!-- ATUAÇÃO -->
-    <div class="box">
-        <h3>Atuação</h3>
-
-        <ul>
-            <li>Perícia em frustração de safra (lavouras)</li>
-            <li>Redução da capacidade produtiva pecuária</li>
-            <li>Avaliação de imóveis rurais</li>
-            <li>Servidão administrativa</li>
-            <li>Laudos técnicos para crédito rural</li>
-        </ul>
-    </div>
-
-    <!-- DIFERENCIAL -->
-    <div class="box">
-        <h3>Diferencial Técnico</h3>
-
-        <ul>
-            <li>Análise com imagens de satélite (NDVI)</li>
-            <li>Histórico climático da região</li>
-            <li>Quantificação real de perdas produtivas</li>
-            <li>Análise econômica da capacidade de pagamento</li>
-        </ul>
-    </div>
-
-    <!-- CTA FINAL -->
-    <div class="cta">
-        <p><strong>Entre em contato e solicite uma análise técnica do seu caso.</strong></p>
-
-        <p style="margin-top:10px;">
-        📞 (62) 99930-5405<br>
-        🌐 www.raddaragronegocios.com.br<br>
-        📲 Instagram: @raddar_agronegocios
-        </p>
-    </div>
-
 </div>
 
-<!-- BOTÃO CONTATO -->
-<a href="https://wa.me/5562999305405" target="_blank" class="botao-contato">
-    <img src="alvo.png" alt="Contato Raddar">
-</a>
-
 <footer>
-    Raddar Agronegócios
+    Raddar Agronegócios — Soluções Técnicas e Inteligência para o Agro
 </footer>
 
 </body>
