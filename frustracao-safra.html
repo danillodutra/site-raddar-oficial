@@ -1,267 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frustração de Safra | Raddar Agronegócios</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frustração de Safra | Raddar Agronegócios</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<link rel="icon" href="favicon.ico">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#fff;
+    border-bottom:2px solid #c9a64b;
+}
+
+header img{
+    width:140px;
+}
+
+nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#333;
+}
+
+nav a:hover{
+    color:#c9a64b;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:auto;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+/* BOX */
+.box{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    border-top:4px solid #c9a64b;
+}
+
+/* IMAGE */
+.img-box{
+    position:relative;
+}
+
+.img-box img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* ICON LINK */
+.icon-link{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#fff;
+    padding:10px;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+.icon-link:hover{
+    transform:scale(1.1);
+}
+
+/* CTA */
+.cta{
+    margin-top:30px;
+    text-align:center;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    border-top:4px solid #c9a64b;
+}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+    .grid{
+        grid-template-columns:1fr;
     }
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-    }
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#fff;
+    margin-top:40px;
+}
+</style>
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background: #ffffff;
-      border-bottom: 2px solid #d4af37;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    header img {
-      height: 45px;
-    }
-
-    nav a {
-      color: #1a1a1a;
-      text-decoration: none;
-      margin-left: 30px;
-      font-size: 18px;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #b8860b;
-    }
-
-    .page-hero {
-      padding: 90px 40px 50px;
-      background: #f8f8f8;
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #111111;
-      line-height: 1.2;
-    }
-
-    .page-hero p {
-      max-width: 920px;
-      margin: 0 auto;
-      font-size: 21px;
-      color: #555555;
-      line-height: 1.7;
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 70px 40px;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 30px;
-      align-items: start;
-    }
-
-    .main-card,
-    .side-card {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 35px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      border-top: 4px solid #d4af37;
-    }
-
-    .main-card h2,
-    .side-card h2 {
-      font-size: 28px;
-      margin-bottom: 18px;
-      color: #111111;
-    }
-
-    .main-card p,
-    .side-card p {
-      font-size: 17px;
-      color: #555555;
-      margin-bottom: 18px;
-      line-height: 1.8;
-    }
-
-    .topics {
-      padding-left: 20px;
-      margin-top: 10px;
-    }
-
-    .topics li {
-      margin-bottom: 12px;
-      font-size: 17px;
-      color: #333333;
-      line-height: 1.7;
-    }
-
-    .cta-box {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f8f8f8;
-      border-left: 4px solid #d4af37;
-      border-radius: 10px;
-      font-size: 16px;
-      color: #444444;
-      line-height: 1.7;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 30px;
-      text-decoration: none;
-      color: #000000;
-      font-weight: bold;
-    }
-
-    .back-link:hover {
-      color: #b8860b;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #eeeeee;
-      color: #666666;
-      background: #ffffff;
-    }
-
-    @media (max-width: 900px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 16px;
-      }
-
-      .page-hero {
-        padding: 70px 20px 40px;
-      }
-
-      .page-hero h1 {
-        font-size: 34px;
-      }
-
-      .page-hero p {
-        font-size: 18px;
-      }
-
-      .content {
-        padding: 50px 20px 70px;
-      }
-
-      .content-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .main-card,
-      .side-card {
-        padding: 28px;
-      }
-
-      .main-card h2,
-      .side-card h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <header>
-    <img src="logo.png" alt="Raddar Agronegócios">
+<header>
+    <img src="logo.png">
+
     <nav>
-      <a href="index.html">Início</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="contato.html">Contato</a>
+        <a href="index.html">Início</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="contato.html">Contato</a>
     </nav>
-  </header>
+</header>
 
-  <section class="page-hero">
+<!-- HERO -->
+<section class="hero">
     <h1>Frustração de Safra (Lavouras)</h1>
+
     <p>
-      Atuação técnica especializada na análise de perdas produtivas em lavouras, com apuração das causas, avaliação dos impactos agronômicos e suporte pericial aplicado a demandas judiciais, extrajudiciais e discussões ligadas ao crédito rural.
+    A perda de produtividade causada por fatores climáticos pode comprometer diretamente a capacidade de pagamento do produtor rural.
+    <br><br>
+    <strong>Com prova técnica e respaldo legal, é possível reestruturar sua dívida.</strong>
     </p>
-  </section>
+</section>
 
-  <section class="content">
-    <div class="content-grid">
+<div class="container">
 
-      <div class="main-card">
-        <h2>Atuação Técnica</h2>
+    <div class="grid">
 
-        <p>
-          A perícia em frustração de safra envolve a avaliação técnica de eventos que comprometem o desempenho produtivo da lavoura, exigindo análise das condições climáticas, histórico da área, manejo adotado, estágio fenológico, potencial produtivo e reflexos econômicos da perda verificada.
-        </p>
+        <!-- TEXTO -->
+        <div class="box">
 
-        <p>
-          O trabalho pericial deve estabelecer, de forma fundamentada, a ocorrência da redução produtiva, sua extensão e os fatores que contribuíram para o resultado obtido, permitindo a construção de prova técnica consistente e compatível com a realidade do imóvel e da cultura analisada.
-        </p>
+            <h3>Atuação Técnica</h3>
 
-        <ul class="topics">
-          <li>Análise técnica de perdas em lavouras decorrentes de fatores climáticos e produtivos</li>
-          <li>Levantamento de dados agronômicos, históricos e documentais da área</li>
-          <li>Avaliação de potencial produtivo e produtividade efetivamente obtida</li>
-          <li>Apuração de impactos econômicos relacionados à quebra de safra</li>
-          <li>Interpretação de dados climáticos e sua correlação com o desempenho da cultura</li>
-          <li>Vistoria técnica com registro das condições observadas em campo</li>
-          <li>Elaboração de laudos técnicos para processos judiciais, extrajudiciais e crédito rural</li>
-        </ul>
+            <p style="margin-top:10px;">
+            A perícia em frustração de safra envolve a análise técnica detalhada de eventos climáticos, histórico da área, manejo adotado e impacto produtivo, com o objetivo de demonstrar a redução da capacidade produtiva e seus reflexos econômicos.
+            </p>
 
-        <div class="cta-box">
-          A análise pericial da frustração de safra é essencial para demonstrar tecnicamente a extensão da perda produtiva e fornecer base segura para discussões indenizatórias, renegociações e medidas judiciais.
+            <ul style="margin-top:15px;">
+                <li>Análise de perdas produtivas</li>
+                <li>Levantamento climático</li>
+                <li>Análise por imagens de satélite (NDVI)</li>
+                <li>Quantificação do prejuízo econômico</li>
+                <li>Elaboração de laudos técnicos</li>
+            </ul>
+
+            <h3 style="margin-top:25px;">Fundamentação Legal</h3>
+
+            <p style="margin-top:10px;">
+            A atuação está fundamentada na legislação vigente:
+            </p>
+
+            <ul style="margin-top:10px;">
+                <li><strong>Lei nº 4.829/1965</strong> – Crédito Rural</li>
+                <li><strong>Lei nº 8.171/1991</strong> – Política Agrícola</li>
+                <li><strong>Manual de Crédito Rural (MCR 2.6.4)</strong> – Prorrogação da dívida</li>
+            </ul>
+
+            <p style="margin-top:15px;">
+            Com base no MCR 2.6.4, é possível comprovar tecnicamente a incapacidade temporária de pagamento decorrente da frustração de safra.
+            </p>
+
         </div>
 
-        <a class="back-link" href="pericia.html">← Voltar para Perícia Rural</a>
-      </div>
+        <!-- IMAGEM -->
+        <div class="img-box">
 
-      <div class="side-card">
-        <h2>Aplicações</h2>
+            <img src="frustacao-safra-ndvi.png">
 
-        <p>
-          Esta atuação pode ser aplicada em situações envolvendo estiagem, excesso de chuva, irregularidade climática, falhas no estabelecimento da cultura, comprometimento do desenvolvimento vegetativo e demais eventos que afetem a produtividade esperada.
-        </p>
+            <!-- ÍCONE -->
+            <a href="analise-ndvi.html" class="icon-link" title="Base técnica">
+                📚
+            </a>
 
-        <p>
-          O suporte técnico é especialmente relevante em discussões sobre prorrogação de operações de crédito rural, apuração de prejuízos, revisões contratuais e litígios que exijam demonstração objetiva da quebra produtiva.
-        </p>
-
-        <p>
-          A abordagem considera elementos agronômicos, documentais e econômicos, sempre com metodologia compatível com a finalidade pericial do caso concreto.
-        </p>
-      </div>
+        </div>
 
     </div>
-  </section>
 
-  <footer>
+    <!-- CTA -->
+    <div class="cta">
+        <p><strong>Fale com um especialista e proteja sua atividade rural.</strong></p>
+
+        <p style="margin-top:10px;">
+        📞 (62) 99930-5405<br>
+        🌐 www.raddaragronegocios.com.br<br>
+        📲 Instagram: @raddar_agronegocios
+        </p>
+    </div>
+
+</div>
+
+<footer>
     Raddar Agronegócios
-  </footer>
+</footer>
 
 </body>
 </html>
