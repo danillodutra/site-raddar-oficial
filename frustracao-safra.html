@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Frustração de Safra | Raddar Agronegócios</title>
 
-<link rel="icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -25,9 +26,9 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 40px;
+    padding:20px 60px;
     background:#fff;
-    border-bottom:2px solid #c9a64b;
+    border-bottom:2px solid #d4af37;
 }
 
 header img{
@@ -35,123 +36,135 @@ header img{
 }
 
 nav a{
-    margin-left:25px;
+    margin-left:30px;
     text-decoration:none;
     color:#333;
     font-weight:500;
 }
 
 nav a:hover{
-    color:#c9a64b;
+    color:#d4af37;
 }
 
-/* HERO */
+/* TITULO */
 .hero{
     text-align:center;
-    padding:60px 20px;
+    padding:60px 20px 30px;
 }
 
 .hero h1{
-    font-size:36px;
-    margin-bottom:20px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .hero p{
     font-size:18px;
-    max-width:800px;
-    margin:auto;
+    max-width:700px;
+    margin:0 auto 10px;
+}
+
+.hero strong{
+    display:block;
+    margin-top:10px;
 }
 
 /* CONTAINER */
 .container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
+    display:flex;
+    gap:40px;
+    padding:40px 60px;
+    align-items:flex-start;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.box{
+/* CARD TEXTO */
+.card{
     background:#fff;
     padding:30px;
     border-radius:12px;
-    border-top:4px solid #c9a64b;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    border-top:4px solid #d4af37;
+    width:50%;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.card ul{
+    margin-top:15px;
+}
+
+.card li{
+    margin-bottom:10px;
 }
 
 /* IMAGEM */
-.img-box{
-    position:relative;
+.image-box{
+    width:50%;
 }
 
-.img-box img{
+.image-box img{
     width:100%;
     border-radius:12px;
 }
 
-/* ÍCONE NDVI */
-.icon-link{
-    position:absolute;
-    top:15px;
-    right:15px;
-    background:#fff;
-    padding:10px;
-    border-radius:50%;
+/* BOTÃO ESTUDO */
+.botao-estudo{
+    margin-top:20px;
+    text-align:center;
+}
+
+.botao-estudo a{
+    display:inline-block;
+    padding:12px 25px;
+    background:#d4af37;
+    color:#000;
     text-decoration:none;
-    font-size:18px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-}
-
-.icon-link:hover{
-    transform:scale(1.1);
-}
-
-/* BOTÃO CONTATO */
-.botao-contato{
-    position:fixed;
-    bottom:30px;
-    right:30px;
-    z-index:999;
-}
-
-.botao-contato img{
-    width:70px;
+    border-radius:8px;
+    font-weight:600;
     transition:0.3s;
 }
 
-.botao-contato img:hover{
-    transform:scale(1.15);
+.botao-estudo a:hover{
+    background:#b8962e;
 }
 
 /* BOTÃO VOLTAR */
 .voltar{
-    display:inline-block;
-    margin-top:25px;
-    font-weight:600;
+    margin-top:20px;
+}
+
+.voltar a{
     text-decoration:none;
     color:#333;
 }
 
-.voltar:hover{
-    color:#c9a64b;
+/* BOTÃO FLUTUANTE */
+.botao-flutuante{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
 }
 
-/* RESPONSIVO */
+.botao-flutuante img{
+    width:60px;
+    transition:0.3s;
+}
+
+.botao-flutuante img:hover{
+    transform:scale(1.1);
+}
+
 @media(max-width:900px){
-    .grid{
-        grid-template-columns:1fr;
+    .container{
+        flex-direction:column;
+    }
+    .card, .image-box{
+        width:100%;
     }
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:#fff;
-    margin-top:40px;
-}
 </style>
 </head>
 
@@ -159,7 +172,6 @@ footer{
 
 <header>
     <img src="logo.png">
-
     <nav>
         <a href="index.html">Início</a>
         <a href="servicos.html">Serviços</a>
@@ -169,73 +181,62 @@ footer{
 
 <section class="hero">
     <h1>Frustração de Safra (Lavouras)</h1>
-
-    <p>
-    A perda de produtividade causada por fatores climáticos pode comprometer diretamente a capacidade de pagamento do produtor rural.
-    <br><br>
+    <p>A perda de produtividade causada por fatores climáticos pode comprometer diretamente a capacidade de pagamento do produtor rural.</p>
     <strong>Com prova técnica e respaldo legal, é possível reestruturar sua dívida.</strong>
-    </p>
 </section>
 
-<div class="container">
+<section class="container">
 
-<div class="grid">
+    <div class="card">
+        <h2>Atuação Técnica</h2>
+        <p>A perícia em frustração de safra envolve análise técnica detalhada de eventos climáticos, histórico da área, manejo adotado e impacto produtivo.</p>
 
-<!-- TEXTO -->
-<div class="box">
+        <ul>
+            <li>Análise de perdas produtivas</li>
+            <li>Levantamento climático</li>
+            <li>Análise por imagens de satélite (NDVI)</li>
+            <li>Quantificação do prejuízo econômico</li>
+            <li>Elaboração de laudos técnicos</li>
+        </ul>
 
-<h3>Atuação Técnica</h3>
+        <h2 style="margin-top:20px;">Fundamentação Legal</h2>
 
-<p style="margin-top:10px;">
-A perícia em frustração de safra envolve análise técnica detalhada de eventos climáticos, histórico da área, manejo adotado e impacto produtivo.
-</p>
+        <ul>
+            <li><strong>Lei nº 4.829/1965</strong> – Crédito Rural</li>
+            <li><strong>Lei nº 8.171/1991</strong> – Política Agrícola</li>
+            <li><strong>Manual de Crédito Rural (MCR 2.6.4)</strong> – Prorrogação da dívida</li>
+        </ul>
 
-<ul style="margin-top:15px;">
-<li>Análise de perdas produtivas</li>
-<li>Levantamento climático</li>
-<li>Análise por imagens de satélite (NDVI)</li>
-<li>Quantificação do prejuízo econômico</li>
-<li>Elaboração de laudos técnicos</li>
-</ul>
+        <p style="margin-top:10px;">
+        Com base no MCR 2.6.4, é possível comprovar tecnicamente a incapacidade temporária de pagamento decorrente da frustração de safra.
+        </p>
 
-<h3 style="margin-top:25px;">Fundamentação Legal</h3>
+        <div class="voltar">
+            <a href="pericia.html">← Voltar para Perícia Rural</a>
+        </div>
 
-<ul style="margin-top:10px;">
-<li><strong>Lei nº 4.829/1965</strong> – Crédito Rural</li>
-<li><strong>Lei nº 8.171/1991</strong> – Política Agrícola</li>
-<li><strong>Manual de Crédito Rural (MCR 2.6.4)</strong> – Prorrogação da dívida</li>
-</ul>
+    </div>
 
-<p style="margin-top:15px;">
-Com base no MCR 2.6.4, é possível comprovar tecnicamente a incapacidade temporária de pagamento decorrente da frustração de safra.
-</p>
+    <div class="image-box">
 
-<a href="pericia.html" class="voltar">← Voltar para Perícia Rural</a>
+        <!-- IMAGEM NDVI -->
+        <img src="frustacao-safra-ndvi.png">
 
+        <!-- BOTÃO ESTUDO -->
+        <div class="botao-estudo">
+            <a href="analise-ndvi.html">Base Técnica e Estudos Aplicados →</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOTÃO FLUTUANTE -->
+<div class="botao-flutuante">
+    <a href="contato.html">
+        <img src="botao.png">
+    </a>
 </div>
-
-<!-- IMAGEM -->
-<div class="img-box">
-
-<!-- 🔥 AGORA FUNCIONA (NOME SEM ACENTO) -->
-<img src="frustacao-safra-ndvi.png">
-
-<a href="analise-ndvi.html" class="icon-link" title="Ver estudos">📚</a>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- BOTÃO CONTATO -->
-<a href="https://wa.me/5562999305405" target="_blank" class="botao-contato">
-    <img src="botao.png">
-</a>
-
-<footer>
-Raddar Agronegócios
-</footer>
 
 </body>
 </html>
