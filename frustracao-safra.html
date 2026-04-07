@@ -10,13 +10,15 @@
 
 <style>
 
+/* RESET */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Poppins', sans-serif;
 }
 
+/* BODY */
 body{
     background:#f5f5f5;
 }
@@ -26,41 +28,36 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 60px;
+    padding:15px 5%;
     background:#fff;
-    border-bottom:2px solid #d4af37;
+    border-bottom:2px solid #c9a646;
 }
 
 header img{
-    width:140px;
+    height:45px;
 }
 
 nav a{
-    margin-left:30px;
+    margin-left:20px;
     text-decoration:none;
     color:#333;
     font-weight:500;
 }
 
-nav a:hover{
-    color:#d4af37;
-}
-
-/* TITULO */
+/* HERO */
 .hero{
     text-align:center;
-    padding:60px 20px 30px;
+    padding:40px 20px;
 }
 
 .hero h1{
-    font-size:42px;
+    font-size:32px;
     margin-bottom:15px;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:700px;
-    margin:0 auto 10px;
+    font-size:16px;
+    color:#555;
 }
 
 .hero strong{
@@ -70,98 +67,71 @@ nav a:hover{
 
 /* CONTAINER */
 .container{
-    display:flex;
-    gap:40px;
-    padding:40px 60px;
-    align-items:flex-start;
+    width:90%;
+    margin:auto;
 }
 
-/* CARD TEXTO */
+/* CARD */
 .card{
     background:#fff;
-    padding:30px;
-    border-radius:12px;
+    padding:20px;
+    border-radius:15px;
     box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    border-top:4px solid #d4af37;
-    width:50%;
-}
-
-.card h2{
-    margin-bottom:15px;
-}
-
-.card ul{
-    margin-top:15px;
-}
-
-.card li{
-    margin-bottom:10px;
+    margin-bottom:20px;
 }
 
 /* IMAGEM */
-.image-box{
-    width:50%;
-}
-
-.image-box img{
+.imagem-ndvi{
     width:100%;
-    border-radius:12px;
+    border-radius:15px;
+    margin-top:15px;
 }
 
-/* BOTÃO ESTUDO */
-.botao-estudo{
-    margin-top:20px;
+/* VOLTAR */
+.voltar-texto{
     text-align:center;
+    margin:15px 0 30px;
+    font-size:14px;
 }
 
-.botao-estudo a{
-    display:inline-block;
-    padding:12px 25px;
-    background:#d4af37;
+.voltar-texto a{
+    color:#555;
+    text-decoration:none;
+}
+
+.voltar-texto a:hover{
+    text-decoration:underline;
+}
+
+/* BOTÃO BASE TÉCNICA */
+.botao{
+    display:block;
+    width:90%;
+    margin:20px auto;
+    padding:15px;
+    text-align:center;
+    background:#c9a646;
     color:#000;
-    text-decoration:none;
-    border-radius:8px;
     font-weight:600;
-    transition:0.3s;
-}
-
-.botao-estudo a:hover{
-    background:#b8962e;
-}
-
-/* BOTÃO VOLTAR */
-.voltar{
-    margin-top:20px;
-}
-
-.voltar a{
+    border-radius:10px;
     text-decoration:none;
-    color:#333;
 }
 
-/* BOTÃO FLUTUANTE */
+/* BOTÃO FLUTUANTE (ALVO) */
 .botao-flutuante{
     position:fixed;
-    right:20px;
     bottom:20px;
-    z-index:999;
+    right:20px;
 }
 
 .botao-flutuante img{
     width:60px;
-    transition:0.3s;
 }
 
-.botao-flutuante img:hover{
-    transform:scale(1.1);
-}
-
-@media(max-width:900px){
-    .container{
-        flex-direction:column;
-    }
-    .card, .image-box{
-        width:100%;
+/* RESPONSIVO */
+@media (min-width:768px){
+    .hero h1{
+        font-size:42px;
     }
 }
 
@@ -170,26 +140,41 @@ nav a:hover{
 
 <body>
 
+<!-- HEADER -->
 <header>
     <img src="logo.png">
     <nav>
-        <a href="index.html">Início</a>
-        <a href="servicos.html">Serviços</a>
-        <a href="contato.html">Contato</a>
+        <a href="/index.html">Início</a>
+        <a href="/pericia.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <h1>Frustração de Safra (Lavouras)</h1>
-    <p>A perda de produtividade causada por fatores climáticos pode comprometer diretamente a capacidade de pagamento do produtor rural.</p>
-    <strong>Com prova técnica e respaldo legal, é possível reestruturar sua dívida.</strong>
+
+    <p>
+        A perda de produtividade causada por fatores climáticos pode comprometer diretamente a capacidade de pagamento do produtor rural.
+    </p>
+
+    <strong>
+        Com prova técnica e respaldo legal, é possível reestruturar sua dívida.
+    </strong>
 </section>
 
-<section class="container">
+<!-- CONTEÚDO -->
+<div class="container">
 
     <div class="card">
-        <h2>Atuação Técnica</h2>
-        <p>A perícia em frustração de safra envolve análise técnica detalhada de eventos climáticos, histórico da área, manejo adotado e impacto produtivo.</p>
+
+        <h3>Atuação Técnica</h3>
+
+        <p>
+            A perícia em frustração de safra envolve análise técnica detalhada de eventos climáticos, histórico da área, manejo adotado e impacto produtivo.
+        </p>
+
+        <br>
 
         <ul>
             <li>Análise de perdas produtivas</li>
@@ -199,44 +184,43 @@ nav a:hover{
             <li>Elaboração de laudos técnicos</li>
         </ul>
 
-        <h2 style="margin-top:20px;">Fundamentação Legal</h2>
+        <br>
+
+        <h3>Fundamentação Legal</h3>
 
         <ul>
-            <li><strong>Lei nº 4.829/1965</strong> – Crédito Rural</li>
-            <li><strong>Lei nº 8.171/1991</strong> – Política Agrícola</li>
-            <li><strong>Manual de Crédito Rural (MCR 2.6.4)</strong> – Prorrogação da dívida</li>
+            <li>Lei nº 4.829/1965 – Crédito Rural</li>
+            <li>Lei nº 8.171/1991 – Política Agrícola</li>
+            <li><strong>MCR 2.6.4</strong> – Prorrogação da dívida</li>
         </ul>
 
-        <p style="margin-top:10px;">
-        Com base no MCR 2.6.4, é possível comprovar tecnicamente a incapacidade temporária de pagamento decorrente da frustração de safra.
+        <br>
+
+        <p>
+            Com base no MCR 2.6.4, é possível comprovar tecnicamente a incapacidade temporária de pagamento decorrente da frustração de safra.
         </p>
 
-        <div class="voltar">
-            <a href="pericia.html">← Voltar para Perícia Rural</a>
-        </div>
-
     </div>
 
-    <div class="image-box">
+    <!-- IMAGEM -->
+    <img src="frustacao-safra-ndvi.png" class="imagem-ndvi">
 
-        <!-- IMAGEM NDVI -->
-        <img src="frustacao-safra-ndvi.png">
+    <!-- VOLTAR (CORRETO) -->
+    <p class="voltar-texto">
+        <a href="/pericia.html">← Voltar para Perícia Rural</a>
+    </p>
 
-        <!-- BOTÃO ESTUDO -->
-        <div class="botao-estudo">
-            <a href="analise-ndvi.html">Base Técnica e Estudos Aplicados →</a>
-        </div>
+    <!-- BOTÃO BASE TÉCNICA -->
+    <a href="/analise-ndvi.html" class="botao">
+        Base Técnica e Estudos Aplicados →
+    </a>
 
-    </div>
-
-</section>
+</div>
 
 <!-- BOTÃO FLUTUANTE -->
-<div class="botao-flutuante">
-    <a href="contato.html">
-        <img src="botao.png">
-    </a>
-</div>
+<a href="/contato.html" class="botao-flutuante">
+    <img src="botao.png">
+</a>
 
 </body>
 </html>
