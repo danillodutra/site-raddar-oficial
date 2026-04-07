@@ -85,10 +85,19 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
+/* IMAGEM PADRÃO */
 .card img{
     width:100%;
     height:200px;
     object-fit:cover;
+    border-bottom:3px solid #d4af37;
+}
+
+/* IMAGEM NDVI (SEM CORTE) */
+.ndvi-img{
+    object-fit:contain !important;
+    background:#fff;
+    padding:5px;
 }
 
 .card h3{
@@ -98,6 +107,7 @@ nav a:hover{
 .card a{
     text-decoration:none;
     color:#1a4cff;
+    font-weight:600;
 }
 
 .card p{
@@ -159,16 +169,18 @@ nav a:hover{
 
 <section class="grid">
 
+    <!-- NDVI ESTUDO -->
     <div class="card">
-        <img src="frustacao-safra-ndvi-estudo.jpg">
+        <img src="frustacao-safra-ndvi-estudo.png" class="ndvi-img">
         <h3>
             <a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">
-                NDVI (Estudo)
+                NDVI (Base Técnica)
             </a>
         </h3>
-        <p>Base científica aplicada ao sensoriamento remoto</p>
+        <p>Base técnica e validação científica por sensoriamento remoto</p>
     </div>
 
+    <!-- SOJA -->
     <div class="card">
         <img src="frustacao-safra-ndvi-soja.jpg">
         <h3>
@@ -179,6 +191,7 @@ nav a:hover{
         <p>Análise espectral e comportamento vegetativo</p>
     </div>
 
+    <!-- ALGODÃO -->
     <div class="card">
         <img src="frustacao-safra-ndvi-algodao.jpg">
         <h3>
@@ -189,6 +202,7 @@ nav a:hover{
         <p>Monitoramento agrícola por sensoriamento remoto</p>
     </div>
 
+    <!-- MILHO -->
     <div class="card">
         <img src="frustacao-safra-ndvi-milho.jpg">
         <h3>
