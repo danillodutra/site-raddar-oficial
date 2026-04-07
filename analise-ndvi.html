@@ -95,6 +95,11 @@ nav a:hover{
     margin:15px 0 5px;
 }
 
+.card a{
+    text-decoration:none;
+    color:#1a4cff;
+}
+
 .card p{
     font-size:14px;
     padding-bottom:20px;
@@ -108,12 +113,24 @@ nav a:hover{
 
 .voltar a{
     text-decoration:none;
-    color:#333;
     font-weight:600;
+    color:#333;
 }
 
 .voltar a:hover{
     color:#d4af37;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav a{
+        margin:0 10px;
+    }
 }
 
 </style>
@@ -143,26 +160,42 @@ nav a:hover{
 <section class="grid">
 
     <div class="card">
-        <img src="https://raddaragronegocios.com.br/frustacao-safra-ndvi-estudo.jpg">
-        <h3><a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">NDVI (Estudo)</a></h3>
+        <img src="frustacao-safra-ndvi-estudo.jpg">
+        <h3>
+            <a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">
+                NDVI (Estudo)
+            </a>
+        </h3>
         <p>Base científica aplicada ao sensoriamento remoto</p>
     </div>
 
     <div class="card">
-        <img src="https://raddaragronegocios.com.br/frustacao-safra-ndvi-soja.jpg">
-        <h3><a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank">Soja</a></h3>
+        <img src="frustacao-safra-ndvi-soja.jpg">
+        <h3>
+            <a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank">
+                Soja
+            </a>
+        </h3>
         <p>Análise espectral e comportamento vegetativo</p>
     </div>
 
     <div class="card">
-        <img src="https://raddaragronegocios.com.br/frustacao-safra-ndvi-algodao.jpg">
-        <h3><a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank">Algodão</a></h3>
+        <img src="frustacao-safra-ndvi-algodao.jpg">
+        <h3>
+            <a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank">
+                Algodão
+            </a>
+        </h3>
         <p>Monitoramento agrícola por sensoriamento remoto</p>
     </div>
 
     <div class="card">
-        <img src="https://raddaragronegocios.com.br/frustacao-safra-ndvi-milho.jpg">
-        <h3><a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank">Milho</a></h3>
+        <img src="frustacao-safra-ndvi-milho.jpg">
+        <h3>
+            <a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank">
+                Milho
+            </a>
+        </h3>
         <p>Indicadores de produtividade e vigor vegetativo</p>
     </div>
 
