@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -111,14 +112,14 @@ nav a{
 /* BOTÃO FLUTUANTE */
 .botao-flutuante{
     position:fixed;
-    bottom:25px;
-    right:25px;
+    bottom:30px;
+    right:30px;
     z-index:999;
 }
 
 .botao-flutuante img{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     box-shadow:0 5px 15px rgba(0,0,0,0.3);
     transition:0.3s;
@@ -128,12 +129,6 @@ nav a{
     transform:scale(1.1);
 }
 
-/* RESPONSIVO */
-@media(max-width:768px){
-    .hero h1{
-        font-size:28px;
-    }
-}
 </style>
 </head>
 
@@ -161,47 +156,49 @@ nav a{
 <!-- CARDS -->
 <section class="container">
 
-    <a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">
-        <div class="card">
-            <img src="frustacao-safra-ndvi-estudo.png">
-            <h3>NDVI (Estudo)</h3>
-            <p>Base científica aplicada ao sensoriamento remoto</p>
-        </div>
-    </a>
+<a href="https://lume.ufrgs.br/bitstream/handle/10183/295765/001289556.pdf?sequence=1" target="_blank">
+<div class="card">
+    <img src="frustacao-safra-ndvi-estudo.png">
+    <h3>NDVI (Estudo)</h3>
+    <p>Base científica aplicada ao sensoriamento remoto</p>
+</div>
+</a>
 
-    <a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank">
-        <div class="card">
-            <img src="frustacao-safra-ndvi-soja.jpg">
-            <h3>Soja</h3>
-            <p>Análise espectral e comportamento vegetativo</p>
-        </div>
-    </a>
+<a href="https://apct.sede.embrapa.br/agrometeoros/article/view/26565/14617" target="_blank">
+<div class="card">
+    <img src="frustacao-safra-ndvi-soja.jpg">
+    <h3>Soja</h3>
+    <p>Análise espectral e comportamento vegetativo</p>
+</div>
+</a>
 
-    <a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank">
-        <div class="card">
-            <img src="frustacao-safra-ndvi-algodao.jpg">
-            <h3>Algodão</h3>
-            <p>Monitoramento agrícola por sensoriamento remoto</p>
-        </div>
-    </a>
+<a href="http://mtc-m16b.sid.inpe.br/attachment.cgi/sid.inpe.br/mtc-m17@80/2007/05.11.18.38/doc/publicacao.pdf" target="_blank">
+<div class="card">
+    <img src="frustacao-safra-ndvi-algodao.jpg">
+    <h3>Algodão</h3>
+    <p>Monitoramento agrícola por sensoriamento remoto</p>
+</div>
+</a>
 
-    <a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank">
-        <div class="card">
-            <img src="frustacao-safra-ndvi-milho.jpg">
-            <h3>Milho</h3>
-            <p>Indicadores de produtividade e vigor vegetativo</p>
-        </div>
-    </a>
+<a href="https://ojs.revistagesec.org.br/secretariado/article/view/4811/3150" target="_blank">
+<div class="card">
+    <img src="frustacao-safra-ndvi-milho.jpg">
+    <h3>Milho</h3>
+    <p>Indicadores de produtividade e vigor vegetativo</p>
+</div>
+</a>
 
 </section>
 
-<!-- VOLTAR -->
+<!-- VOLTAR (ANTI-ERRO DEFINITIVO) -->
 <div class="voltar">
-    <a href="/frustacao-safra.html">← Voltar para Frustração de Safra</a>
+    <a href="#" onclick="window.location.href='/frustracao-safra.html'; return false;">
+        ← Voltar para Frustração de Safra
+    </a>
 </div>
 
 <!-- BOTÃO CONTATO -->
-<a href="https://wa.me/5562999305405" target="_blank" class="botao-flutuante">
+<a href="/contato.html" class="botao-flutuante">
     <img src="botao.png">
 </a>
 
